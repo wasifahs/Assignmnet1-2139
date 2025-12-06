@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // ----------------------------
@@ -34,7 +35,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 .AddDefaultTokenProviders();
 
 // Register EmailSender service
-builder.Services.AddSingleton<IEmailSender, EmailSender>();
+builder.Services.AddSingleton<IEmailSender,IEmailSender>();
 
 // Add authorization policies
 builder.Services.AddAuthorization(options =>
