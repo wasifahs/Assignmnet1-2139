@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Assignment1_2139.Models.Purchase>
+
+<h2>Ticket Purchases</h2>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Guest Name</th>
+            <th>Guest Email</th>
+            <th>Purchase Date</th>
+            <th>Purchased Events</th>
+            <th>Total Cost</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var purchase in Model)
+            {
+                <tr>
+                    <td>@purchase.GuestName</td>
+                    <td>@purchase.GuestEmail</td>
+                    <td>@purchase.PurchaseDate.ToLocalTime().ToString("f")</td>
+
+                    <td>
+                        @if (purchase.EventPurchases != null && purchase.EventPurchases.Any())
+                        {
+                            <ul class="list-unstyled mb-0">
+                                @foreach (var ep in purchase.EventPurchases)
+                                {
+                                    <li>
+                                        <strong>@ep.Event?.Title</strong> -
+                                        @ep.TicketQuantity ticket(s) ×
+                                        @(ep.Event?.TicketPrice.ToString("C") ?? "$0")
+                                        =
+                                        @((ep.TicketQuantity * (ep.Event?.TicketPrice ?? 0)).ToString("C"))
+                                    </li>
+                                }
+                            </ul>
+                        }
+                        else
+                        {
+                            <span>-</span>
+                        }
+                    </td>
+
+                    <td>
+                        @{
+                            var subtotal = purchase.EventPurchases?.Sum(ep =>
+                                (ep.Event?.TicketPrice ?? 0) * ep.TicketQuantity
+                            ) ?? 0;
+                        }
+                        @subtotal.ToString("C")
+                    </td>
+
+                    <td>
+                        <!-- Everyone can see Details -->
+                        <a asp-action="Details"
+                           asp-route-purchaseId="@purchase.PurchaseId"
+                           class="btn btn-info btn-sm">Details</a>
+
+                        <!-- ONLY ADMIN may Edit/Delete purchases -->
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <a asp-action="Edit"
+                               asp-route-purchaseId="@purchase.PurchaseId"
+                               class="btn btn-warning btn-sm">Edit</a>
+
+                            <a asp-action="Delete"
+                               asp-route-purchaseId="@purchase.PurchaseId"
+                               class="btn btn-danger btn-sm">Delete</a>
+                        }
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="6" class="text-center">No purchases found.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- ONLY ADMIN may create purchases manually -->
+@if (User.IsInRole("Admin"))
+{
+    <a asp-action="Create" class="btn btn-primary mt-2">Create New Purchase</a>
+}
+
+
+
+
+
+
+

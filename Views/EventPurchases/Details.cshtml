@@ -1,0 +1,18 @@
+﻿@model Assignment1_2139.Models.EventPurchase
+
+<h2>Event Purchase Details</h2>
+
+<div class="card mb-3">
+    <div class="card-body">
+        <p><strong>Event:</strong> @Model.Event?.Title ?? "N/A"</p>
+        <p><strong>Guest Name:</strong> @Model.Purchase?.GuestName ?? "N/A"</p>
+        <p><strong>Guest Email:</strong> @Model.Purchase?.GuestEmail ?? "N/A"</p>
+        <p><strong>Purchase Date:</strong> @(Model.Purchase?.PurchaseDate.ToString("g") ?? "N/A")</p>
+        <p><strong>Ticket Quantity:</strong> @Model.TicketQuantity</p>
+        <p><strong>Total Cost:</strong> @((Model.TicketQuantity * (Model.Event?.TicketPrice ?? 0)).ToString("C"))</p>
+        <p><strong>Created At:</strong> @(Model.Purchase?.CreatedAt.ToString("g") ?? "N/A")</p>
+        <p><strong>Created By:</strong> @(Model.Purchase?.CreatedBy ?? "System")</p>
+    </div>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

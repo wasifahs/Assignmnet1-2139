@@ -1,0 +1,116 @@
+﻿@model Assignment1_2139.Models.ViewModels.DashboardViewModel
+
+<h2 class="mb-4">My Dashboard</h2>
+
+<div class="row">
+    <!-- Attendee: Upcoming Tickets -->
+    <div class="col-md-6">
+        <h3>Upcoming Tickets</h3>
+        @if(Model.UpcomingPurchases?.Any() == true)
+        {
+            <div class="row row-cols-1 g-3">
+                @foreach(var p in Model.UpcomingPurchases)
+                {
+                    @foreach(var ep in p.EventPurchases)
+                    {
+                        <div class="col">
+                            <div class="card h-100 p-2">
+                                <div class="card-body">
+                                    <h5 class="card-title">@ep.Event.Title</h5>
+                                    <p>@ep.TicketQuantity x @ep.Event.TicketPrice.ToString("C")</p>
+                                    <div class="d-flex align-items-center gap-2">
+
+                                        <a href="/Tickets/Download/@ep.EventId?purchaseId=@p.PurchaseId" class="btn btn-sm btn-outline-primary">Download PDF</a>
+                                        <img src="/Tickets/QR/@ep.EventId?purchaseId=@p.PurchaseId" alt="QR Code" width="80" />
+
+                                        <form asp-controller="Tickets" asp-action="CancelTicket" method="post">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="purchaseId" value="@p.PurchaseId" />
+                                            <input type="hidden" name="eventId" value="@ep.EventId" />
+                                            <button type="submit" class="btn btn-sm btn-danger">Cancel Ticket</button>
+                                        </form>
+
+                                    </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    }
+                }
+            </div>
+        }
+        else
+        {
+            <p>No upcoming tickets.</p>
+        }
+    </div>
+
+    <!-- Attendee: Purchase History -->
+    <div class="col-md-6">
+        <h3>Purchase History</h3>
+        @if(Model.HistoryPurchases?.Any() == true)
+        {
+            <div class="row row-cols-1 g-3">
+                @foreach(var p in Model.HistoryPurchases)
+                {
+                    <div class="col">
+                        <div class="card p-2">
+                            <div class="card-body">
+                                <h6>@p.PurchaseDate.ToShortDateString() - <strong>@p.TotalCost.ToString("C")</strong></h6>
+                                <label>Rate:</label>
+                                <select class="form-select form-select-sm rating" data-purchase="@p.PurchaseId" style="width:auto;">
+                                    @for(int i = 1; i <= 5; i++)
+                                    {
+                                        <option>@i</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p>No past purchases.</p>
+        }
+    </div>
+</div>
+
+<!-- Organizer: My Events and Revenue -->
+@if(Model.MyEvents?.Any() == true)
+{
+    <h3 class="mt-4">My Events (Organizer/Admin)</h3>
+    <div class="row row-cols-1 row-cols-md-2 g-3">
+        @foreach(var e in Model.MyEvents)
+        {
+            <div class="col">
+                <div class="card p-2">
+                    <div class="card-body d-flex justify-content-between">
+                        <span>@e.Title</span>
+                        <span>@e.TicketPrice.ToString("C")</span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="mt-2"><strong>Total revenue:</strong> @Model.TotalRevenue.ToString("C")</div>
+}
+
+<!-- Optional: Analytics for Organizer/Admin -->
+@if(Model.TicketSalesByCategory != null)
+{
+    <h3 class="mt-4">Analytics</h3>
+    <div class="card p-2">
+        <div class="card-body">
+            <p><strong>Ticket Sales by Category:</strong> @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.TicketSalesByCategory))</p>
+            <p><strong>Revenue per Month:</strong> @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.RevenuePerMonth))</p>
+            <p><strong>Top 5 Events:</strong> @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Top5Events))</p>
+            
+            <a asp-controller="Account" asp-action="Edit" class="btn btn-warning">Edit Profile</a>
+        </div>
+    </div>
+}
+
+
+

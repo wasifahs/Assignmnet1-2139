@@ -1,0 +1,36 @@
+﻿@model Assignment1_2139.Models.ApplicationUser
+
+<h3>My Profile</h3>
+<form asp-action="EditProfile" method="post" enctype="multipart/form-data">
+
+    <div class="mb-3">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" readonly />
+    </div>
+    <div class="mb-3">
+        <label asp-for="FullName"></label>
+        <input asp-for="FullName" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="PhoneNumber"></label>
+        <input asp-for="PhoneNumber" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Current Profile Picture:</label><br />
+        @if (!string.IsNullOrEmpty(Model.ProfilePictureUrl))
+        {
+            <img src="@Model.ProfilePictureUrl" width="150" />
+        }
+        else
+        {
+            <p>No profile picture uploaded.</p>
+        }
+    </div>
+    <div class="mb-3">
+        <label asp-for="ProfilePictureUrl"></label>
+        <input asp-for="ProfilePictureUrl" type="file" class="form-control" />
+        <small class="text-muted">Choose a new picture to replace the current one</small>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>

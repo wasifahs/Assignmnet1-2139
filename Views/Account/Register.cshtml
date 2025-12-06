@@ -1,0 +1,107 @@
+﻿@model Assignment1_2139.Models.ViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Register</h2>
+
+                    <form asp-action="Register" method="post" enctype="multipart/form-data">
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label">Email</label>
+                            <input asp-for="Email" class="form-control" placeholder="Enter your email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <!-- Full Name -->
+                        <div class="mb-3">
+                            <label asp-for="FullName" class="form-label">Full Name</label>
+                            <input asp-for="FullName" class="form-control" placeholder="Enter your full name" />
+                            <span asp-validation-for="FullName" class="text-danger"></span>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="mb-3">
+                            <label asp-for="PhoneNumber" class="form-label">Phone Number</label>
+                            <input asp-for="PhoneNumber" class="form-control" placeholder="Enter your phone number" />
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+
+                        <!-- Date of Birth -->
+                        <div class="mb-3">
+                            <label asp-for="DateOfBirth" class="form-label">Date of Birth</label>
+                            <input asp-for="DateOfBirth" type="date" class="form-control" />
+                            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                        </div>
+
+                        <!-- Profile Picture -->
+                        <div class="mb-3">
+                            <label asp-for="ProfilePictureUrl" class="form-label">Profile Picture</label>
+                            <input asp-for="ProfilePictureUrl" type="file" class="form-control" />
+                            <span asp-validation-for="ProfilePictureUrl" class="text-danger"></span>
+                            
+                        </div>
+
+                        <!-- Password -->
+                        <div class="mb-3">
+                            <label asp-for="Password" class="form-label">Password</label>
+                            <input asp-for="Password" type="password" class="form-control" placeholder="Enter your password" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <!-- Confirm Password -->
+                        <div class="mb-3">
+                            <label asp-for="ConfirmPassword" class="form-label">Confirm Password</label>
+                            <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm your password" />
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <form asp-action="Register" method="post" enctype="multipart/form-data">
+
+                            <div asp-validation-summary="All" class="text-danger"></div>
+
+                            <!-- Email -->
+                            ...
+    
+                            <div class="d-grid mb-3">
+                                <button type="submit" class="btn btn-success">Register</button>
+                            </div>
+                        </form>
+
+
+                    </form>
+
+                    <hr />
+
+                    <div class="text-center">
+                        <p>Already have an account? <a asp-action="Login" asp-controller="Account">Login here</a></p>
+                    </div>
+                </div>
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success text-center">
+                        @TempData["SuccessMessage"]
+                    </div>
+                }
+
+                @if (TempData["ErrorMessage"] != null)
+                {
+                    <div class="alert alert-danger text-center">
+                        @TempData["ErrorMessage"]
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

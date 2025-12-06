@@ -1,0 +1,9 @@
+C:\Users\user\Desktop\COMP2139\Ass 2\Assignment1_2139\obj\Debug\net9.0\Assignment1-2139.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\COMP2139\Ass 2\Assignment1_2139\obj\Debug\net9.0\Assignment1-2139.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\COMP2139\Ass 2\Assignment1_2139\obj\Debug\net9.0\Assignment1-2139.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\COMP2139\Ass 2\Assignment1_2139\obj\Debug\net9.0\Assignment1-2139.AssemblyInfo.cs
+C:\Users\user\Desktop\COMP2139\Ass 2\Assignment1_2139\obj\Debug\net9.0\Assignment1-2139.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\COMP2139\Ass 2\Assignment1_2139\obj\Debug\net9.0\Assignment1-2139.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\Desktop\COMP2139\Ass 2\Assignment1_2139\obj\Debug\net9.0\Assignment1-2139.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\Desktop\COMP2139\Ass 2\Assignment1_2139\obj\Debug\net9.0\Assignment1-2139.RazorAssemblyInfo.cache
+C:\Users\user\Desktop\COMP2139\Ass 2\Assignment1_2139\obj\Debug\net9.0\Assignment1-2139.RazorAssemblyInfo.cs

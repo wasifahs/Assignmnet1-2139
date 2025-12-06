@@ -1,0 +1,78 @@
+﻿@model Assignment1_2139.Models.Purchase
+
+<h2>Create Purchase</h2>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="GuestName" class="form-label"></label>
+        <input asp-for="GuestName" class="form-control"/>
+        <span asp-validation-for="GuestName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="GuestEmail" class="form-label"></label>
+        <input asp-for="GuestEmail" class="form-control"/>
+        <span asp-validation-for="GuestEmail" class="text-danger"></span>
+    </div>
+
+    <h5>Event Purchases</h5>
+
+    <div id="eventPurchasesContainer">
+        <div class="row mb-2">
+            <div class="col">
+                <label>Event</label>
+                <select name="EventPurchases[0].EventId" class="form-select">
+                    <option value="0">--Select Event--</option>
+                    @foreach (var ev in ViewBag.Events as IEnumerable<Assignment1_2139.Models.Event>)
+                    {
+                        <option value="@ev.Id">@ev.Title (@ev.TicketPrice:C)</option>
+                    }
+                </select>
+
+            </div>
+            <div class="col">
+                <label>Tickets</label>
+                <input type="number" name="EventPurchases[0].TicketQuantity" class="form-control" value="1" min="1"/>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-secondary mb-3" onclick="addEventPurchase()">Add Event</button>
+    <button type="submit" class="btn btn-primary">Create Purchase</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        let index = 1;
+
+        const eventOptions = `@Html.Raw(string.Join("",
+            ((IEnumerable<Assignment1_2139.Models.Event>)ViewBag.Events)
+            .Select(ev => $"<option value='{ev.Id}'>{ev.Title} ({ev.TicketPrice:C})</option>")
+        ))`;
+
+        function addEventPurchase() {
+            const container = document.getElementById('eventPurchasesContainer');
+            const div = document.createElement('div');
+            div.classList.add('row', 'mb-2');
+            div.innerHTML = `
+                <div class="col">
+                    <label>Event</label>
+                    <select name="EventPurchases[${index}].EventId" class="form-select">
+                        <option value="">--Select Event--</option>
+                        ${eventOptions}
+                    </select>
+                </div>
+                <div class="col">
+                    <label>Tickets</label>
+                    <input type="number" name="EventPurchases[${index}].TicketQuantity" class="form-control" value="1" min="1" />
+                </div>`;
+            container.appendChild(div);
+            index++;
+        }
+    </script>
+}
+

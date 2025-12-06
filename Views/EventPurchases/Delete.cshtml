@@ -1,0 +1,30 @@
+﻿@model Assignment1_2139.Models.EventPurchase
+
+<h2>Delete Event Purchase</h2>
+
+<div class="alert alert-warning">
+    <p>Are you sure you want to delete this Event Purchase?</p>
+</div>
+
+<div class="card mb-3">
+    <div class="card-body">
+        <p>
+            <strong>Event:</strong> @Model.Event?.Title
+        </p>
+
+        <p>
+            <strong>Purchase:</strong> @Model.Purchase?.GuestName
+        </p>
+
+        <p>
+            <strong>Ticket Quantity:</strong> @Model.TicketQuantity
+        </p>
+    </div>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="EventId" />
+    <input type="hidden" asp-for="PurchaseId" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

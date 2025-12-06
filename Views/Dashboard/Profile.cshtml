@@ -1,0 +1,26 @@
+﻿@model Assignment1_2139.Models.ApplicationUser
+
+<h3>My Profile</h3>
+
+<form asp-action="UpdateProfile" asp-controller="Dashboard" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label asp-for="FullName" class="form-label">Full Name</label>
+        <input asp-for="FullName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="PhoneNumber" class="form-label">Phone</label>
+        <input asp-for="PhoneNumber" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ProfilePictureUrl" class="form-label">Profile Picture</label>
+        <input asp-for="ProfilePictureUrl" type="file" class="form-control" />
+        @if (!string.IsNullOrEmpty(Model.ProfilePictureUrl))
+        {
+            <img src="~/uploads/@Model.ProfilePictureUrl" alt="Profile Picture" class="img-thumbnail mt-2" style="width:100px;" />
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Profile</button>
+</form>

@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Assignment2</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Assignment1.styles.css" asp-append-version="true" />
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Assignment2</a>
+
+            <!-- Toggler for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar content -->
+            @if (User.Identity.IsAuthenticated)
+            {
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Events" asp-action="Index">Events</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Categories" asp-action="Index">Categories</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Purchases" asp-action="Index">Ticket Purchases</a>
+                    </li>
+                </ul>
+            }
+
+
+                <!-- Right side search and auth buttons -->
+                <div class="d-flex align-items-center">
+                    <form class="d-flex me-3" asp-controller="Home" asp-action="GeneralSearch" method="get">
+                        <!-- Dropdown inside the search form -->
+                        <select name="searchType" class="form-select me-2">
+                            <option value="events">Events</option>
+                            <option value="tickets">Tickets</option>
+                            <option value="categories">Categories</option>
+                        </select>
+
+                        <!-- Search input -->
+                        <input type="text" name="searchString" class="form-control me-2" placeholder="Search..." />
+
+                        <!-- Search button -->
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+
+                    
+                    <div class="d-flex align-items-center">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <!-- Dashboard button -->
+                            <a class="btn btn-success me-2" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+
+                            <!-- Logout button -->
+                            <form method="post" asp-controller="Account" asp-action="Logout" class="d-inline">
+                                <button type="submit" class="btn btn-success">Logout</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <a class="btn btn-success me-2" asp-controller="Account" asp-action="Login">Login</a>
+                            <a class="btn btn-success" asp-controller="Account" asp-action="Register">Register</a>
+                        }
+                    </div>
+
+                </div>
+
+            </div>
+    </nav>
+</header>
+
+
+
+<div class="container mt-3">
+    @if (TempData["SuccessMessage"] != null) {
+        <div class="alert alert-success text-center">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+    @if (TempData["ErrorMessage"] != null) {
+        <div class="alert alert-danger text-center">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+</div>
+
+
+<div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-light border-top">
+        <div class="container text-center text-muted">
+            &copy; 2025 - Assignment2 - Group 63 - Members: Rezarta Marku, Wasifa Hosein, Isha Isha
+        </div>
+    </footer>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

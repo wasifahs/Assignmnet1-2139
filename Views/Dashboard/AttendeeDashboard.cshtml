@@ -1,0 +1,134 @@
+﻿@model Assignment1_2139.Models.ViewModels.DashboardViewModel
+
+@{
+    ViewData["Title"] = "My Dashboard";
+}
+
+<h2 class="mb-4">Welcome, @Model.User.FullName</h2>
+
+<!-- ========================= -->
+<!-- 1. UPCOMING TICKETS -->
+<!-- ========================= -->
+<h3>🎫 Upcoming Events</h3>
+
+@if (Model.UpcomingPurchases == null || !Model.UpcomingPurchases.Any())
+{
+    <p class="text-muted">You have no upcoming tickets.</p>
+}
+else
+{
+    <div class="row">
+        @foreach (var purchase in Model.UpcomingPurchases)
+        {
+            foreach (var ep in purchase.EventPurchases)
+            {
+                <div class="col-md-4 mb-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5>@ep.Event.Title</h5>
+                            <p>
+                                <strong>Date:</strong> @ep.Event.StartDate.ToString("yyyy-MM-dd")<br />
+                                <strong>Tickets:</strong> @ep.TicketQuantity
+                            </p>
+
+                            <!-- Placeholder for QR Code -->
+                            <div class="border p-2 text-center bg-light mb-2">
+                                <small>QR Code Here</small>
+                            </div>
+
+                            <a class="btn btn-primary btn-sm" 
+                               asp-controller="Purchases" 
+                               asp-action="DownloadTicketPdf" 
+                               asp-route-id="@purchase.PurchaseId">
+                                Download PDF
+                                
+                                <a class="btn btn-primary btn-sm"
+                                   asp-controller="Purchases"
+                                   asp-action="DownloadTicketPdf"
+                                   asp-route-id="@purchase.PurchaseId">
+                                    Download PDF
+                                </a>
+
+                                <a class="btn btn-danger btn-sm mt-2"
+                                   asp-controller="Tickets"
+                                   asp-action="CancelTicket"
+                                   asp-route-purchaseId="@purchase.PurchaseId">
+                                    Cancel Ticket
+                                </a>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+}
+
+<hr class="my-4" />
+
+<!-- ========================= -->
+<!-- 2. PURCHASE HISTORY -->
+<!-- ========================= -->
+<h3>📜 Purchase History</h3>
+
+@if (Model.HistoryPurchases == null || !Model.HistoryPurchases.Any())
+{
+    <p class="text-muted">No past purchases found.</p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Tickets</th>
+                <th>Total Paid</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var purchase in Model.HistoryPurchases)
+            {
+                foreach (var ep in purchase.EventPurchases)
+                {
+                    <tr>
+                        <td>@ep.Event.Title</td>
+                        <td>@ep.Event.StartDate.ToString("yyyy-MM-dd")</td>
+                        <td>@ep.TicketQuantity</td>
+                        <td>@purchase.TotalCost.ToString("C")</td>
+                        <td>
+                            <!-- Rating (1-5) dropdown -->
+                            <select class="form-select form-select-sm" style="width:100px">
+                                <option>★ 1</option>
+                                <option>★ 2</option>
+                                <option>★ 3</option>
+                                <option>★ 4</option>
+                                <option>★ 5</option>
+                            </select>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+}
+
+<hr class="my-4" />
+
+<!-- ========================= -->
+<!-- 3. PROFILE SECTION -->
+<!-- ========================= -->
+<h3>👤 Profile</h3>
+
+<div class="card p-3 shadow-sm" style="max-width: 400px;">
+    <p><strong>Name:</strong> @Model.User.FullName</p>
+    <p><strong>Email:</strong> @Model.User.Email</p>
+
+    <a asp-controller="Account" asp-action="EditProfile" class="btn btn-secondary"> Edit Profile </a>
+    
+
+    
+</div>
+

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Assignment1_2139.Models.Event>
+
+<h3>My Events</h3>
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Tickets Sold</th>
+        <th>Total Revenue</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var ev in Model)
+    {
+        var ticketsSold = ev.EventPurchases?.Sum(ep => ep.TicketQuantity) ?? 0;
+        var revenue = ev.EventPurchases?.Sum(ep => ep.TicketQuantity * ev.TicketPrice) ?? 0;
+
+        <tr>
+            <td>@ev.Title</td>
+            <td>@ev.StartDate.ToString("f")</td>
+            <td>@ticketsSold</td>
+            <td>@revenue.ToString("C")</td>
+            <td>
+                <a asp-controller="Events" asp-action="Edit" asp-route-id="@ev.Id"
+                   class="btn btn-sm btn-warning">Edit</a>
+
+                <a asp-controller="Events" asp-action="Delete" asp-route-id="@ev.Id"
+                   class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

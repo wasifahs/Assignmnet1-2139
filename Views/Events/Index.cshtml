@@ -1,0 +1,241 @@
+﻿@model IEnumerable<Assignment1_2139.Models.Event>
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+<h2>Events</h2>
+
+@if (User.IsInRole("Organizer") || User.IsInRole("Admin"))
+{
+    <a asp-action="Create" asp-controller="Events" class="btn btn-primary mb-3">
+        Create New Event
+    </a>
+}
+
+<!-- ============================= -->
+<!-- Cart Badge + Total Price -->
+<!-- ============================= -->
+<div class="d-flex justify-content-end mb-3 align-items-center">
+    <button type="button" class="btn btn-secondary position-relative me-3">
+        Cart
+        <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+        </span>
+    </button>
+    <div>
+        <strong>Total: $<span id="cartTotal">0.00</span></strong>
+    </div>
+</div>
+
+<!-- ============================= -->
+<!-- Search Input (Live AJAX) -->
+<!-- ============================= -->
+<div class="mb-3">
+    <input type="text" id="searchInput" class="form-control" placeholder="Search by event name..." />
+</div>
+
+<!-- ============================= -->
+<!-- Event Cards (Loaded via Partial or Model) -->
+<!-- ============================= -->
+<div id="eventsContainer">
+    @foreach (var e in Model)
+    {
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">@e.Title</h5>
+                <p class="card-text">
+                    @if (!string.IsNullOrEmpty(e.Description))
+                    {
+                        @(e.Description.Length > 120 
+                            ? e.Description.Substring(0, 120) + "..." 
+                            : e.Description)
+                    }
+                </p>
+                <p><strong>Price:</strong> @e.TicketPrice.ToString("C") • <strong>Available:</strong> @e.AvailableTickets</p>
+
+                <!-- Quantity Input -->
+                <div class="mb-2">
+                    <label for="qty_@e.Id">Quantity:</label>
+                    <input type="number"
+                           id="qty_@e.Id"
+                           value="1"
+                           min="1"
+                           max="@e.AvailableTickets"
+                           class="form-control"
+                           style="width:100px;" />
+                </div>
+
+                <!-- Buttons -->
+                <a asp-controller="Events" asp-action="Details" asp-route-id="@e.Id" class="btn btn-sm btn-primary me-1">Details</a>
+
+                @* Add to Cart for everyone *@
+                <button class="btn btn-sm btn-success add-to-cart" data-event-id="@e.Id">Add to Cart</button>
+                
+                @if (User.IsInRole("Attendee"))
+                {
+                    <form asp-action="Buy" asp-controller="Events" method="get" class="d-inline">
+                        <input type="hidden" name="id" value="@e.Id" />
+                        <button type="submit" class="btn btn-sm btn-primary">Buy Now</button>
+                    </form>
+                }
+
+
+
+                <!-- Low stock warning -->
+                <span id="stock-warning-@e.Id" class="text-danger" style="display:none;">Only @e.AvailableTickets tickets left!</span>
+
+                <!-- Edit / Delete buttons -->
+                @if (User.IsInRole("Organizer") && e.CreatedByUserId == User.FindFirst(ClaimTypes.NameIdentifier)?.Value)
+                {
+                    <a asp-action="Edit" asp-route-id="@e.Id" class="btn btn-warning btn-sm ms-1">Edit</a>
+                }
+                @if (User.IsInRole("Admin"))
+                {
+                    <a asp-action="Edit" asp-route-id="@e.Id" class="btn btn-warning btn-sm ms-1">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@e.Id" class="btn btn-danger btn-sm ms-1">Delete</a>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+<!-- ============================= -->
+<!-- Purchase Confirmation Modal -->
+<!-- ============================= -->
+<div class="modal fade" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="purchaseModalLabel">Purchase Successful!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Thank you for your purchase!</p>
+        <canvas id="confettiCanvas"></canvas>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= -->
+<!-- Scripts -->
+<!-- ============================= -->
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        // =============================
+        // Live Search AJAX
+        // =============================
+        $('#searchInput').on('keyup', function () {
+            var searchTerm = $(this).val();
+
+            $.ajax({
+                url: '@Url.Action("Search", "Events")',
+                type: 'GET',
+                data: { searchTerm: searchTerm },
+                success: function (data) {
+                    $('#eventsContainer').html(data); // Replace events with partial
+                }
+            });
+        });
+
+        // =============================
+        // Add to Cart AJAX
+        // =============================
+        $(document).on('click', '.add-to-cart', function () {
+            var eventId = $(this).data('event-id');
+            var qty = parseInt($('#qty_' + eventId).val());
+
+            $.ajax({
+                url: '@Url.Action("AddToCart", "Events")',
+                type: 'POST',
+                data: { eventId: eventId, quantity: qty },
+                success: function (data) {
+                    if (data.success) {
+                        // Update badge & total price
+                        $('#cartBadge').text(data.totalQuantity);
+                        $('#cartTotal').text(data.cartTotal.toFixed(2));
+
+
+                        // Show low stock warning
+                        var available = parseInt($('#qty_' + eventId).attr('max'));
+                        if (available - qty <= 7) {
+                            $('#stock-warning-' + eventId).show();
+                        }
+                    }
+                }
+            });
+        });
+
+        // =============================
+        // Purchase Confirmation (trigger modal & confetti)
+        // =============================
+        function showPurchaseConfirmation() {
+            var myModal = new bootstrap.Modal(document.getElementById('purchaseModal'));
+            myModal.show();
+
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+
+
+        // =============================
+        // BUY NOW (Attendee only)
+        // =============================
+        $(document).on('click', '.buy-now', function () {
+            var eventId = $(this).data('event-id');
+            var qty = parseInt($('#qty_' + eventId).val());
+
+            $.ajax({
+                url: '/Events/Buy', // Must match controller POST
+                type: 'POST',
+                data: {
+                    eventId: eventId,
+                    quantity: qty,
+                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                },
+                success: function (data) {
+                    if (data.success) {
+                        showPurchaseConfirmation();  // Show modal + confetti
+                        // Update available tickets dynamically
+                        var qtyInput = $('#qty_' + eventId);
+                        qtyInput.attr('max', parseInt(qtyInput.attr('max')) - qty);
+                    } else {
+                        alert(data.message); // Show error if quantity invalid
+                    }
+                },
+                error: function(xhr) {
+                    alert('Something went wrong. Check console for errors.');
+                    console.log(xhr.responseText);
+                }
+            });
+        });
+
+
+
+
+
+        // Example: Trigger modal if redirected with TempData flag
+        @if (TempData["PurchaseSuccess"] != null)
+        {
+            <text>
+                $(document).ready(function() {
+                    showPurchaseConfirmation();
+                });
+            </text>
+        }
+    </script>
+}
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+﻿@model Assignment1_2139.Models.EventPurchase
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+<h2>Create Event Purchase</h2>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="PurchaseId" class="form-label">Select Purchase</label>
+        <select asp-for="PurchaseId" asp-items="ViewBag.Purchases" class="form-select" required>
+            <option value="">-- Select Purchase --</option>
+        </select>
+        <span asp-validation-for="PurchaseId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="EventId" class="form-label">Select Event</label>
+        <select asp-for="EventId" asp-items="ViewBag.Events" class="form-select" required>
+            <option value="">-- Select Event --</option>
+        </select>
+        <span asp-validation-for="EventId" class="text-danger"></span>
+    </div>
+    
+
+    <button type="submit" class="btn btn-success">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    <div class="mb-3">
+        <label asp-for="TicketQuantity" class="form-label">Ticket Quantity</label>
+        <input asp-for="TicketQuantity" type="number" min="1" value="1" class="form-control" required />
+        <span asp-validation-for="TicketQuantity" class="text-danger"></span>
+    </div>
+
+ 
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

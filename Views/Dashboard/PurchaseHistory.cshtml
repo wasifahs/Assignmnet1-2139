@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Assignment1_2139.Models.Purchase>
+
+<h3>Purchase History</h3>
+
+@if (Model.Any())
+{
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="table-light">
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Tickets</th>
+                <th>Total Price</th>
+                <th>Rating</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var purchase in Model)
+            {
+                @foreach (var ep in purchase.EventPurchases)
+                {
+                    <tr>
+                        <td>@ep.Event?.Title ?? "Deleted Event"</td>
+                        <td>@ep.Event?.StartDate.ToString("f") ?? "-"</td>
+                        <td>@ep.TicketQuantity</td>
+                        <td>@(ep.Event != null ? (ep.TicketQuantity * ep.Event.TicketPrice).ToString("C") : "-")</td>
+                        <td>
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                <span class="fa fa-star @(i <= ep.Rating ? "checked" : "")"></span>
+                            }
+                        </td>
+                    </tr>
+                }
+            }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="alert alert-info">
+        You have no purchase history yet.
+    </div>
+}
+
+<style>
+.checked {
+    color: gold;
+}
+</style>

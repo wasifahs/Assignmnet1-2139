@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Assignment1_2139.Models.EventPurchase>
+
+<h2>Event Purchases</h2>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Event</th>
+        <th>Purchase</th>
+        <th>Ticket Quantity</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    @if (Model.Any())
+    {
+        foreach (var ep in Model)
+        {
+            <tr>
+                <td>@ep.Event?.Title ?? "No name"</td>
+                <td>@ep.Purchase?.GuestName</td>
+                <td>@ep.TicketQuantity</td>
+
+                <td>
+                    <!-- Everyone can see DETAILS -->
+                    <a asp-action="Details"
+                       asp-route-eventId="@ep.EventId"
+                       asp-route-purchaseId="@ep.PurchaseId"
+                       class="btn btn-info btn-sm">Details</a>
+
+                    <!-- Only ADMIN can Edit/Delete -->
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-action="Edit"
+                           asp-route-eventId="@ep.EventId"
+                           asp-route-purchaseId="@ep.PurchaseId"
+                           class="btn btn-warning btn-sm">Edit</a>
+
+                        <a asp-action="Delete"
+                           asp-route-eventId="@ep.EventId"
+                           asp-route-purchaseId="@ep.PurchaseId"
+                           class="btn btn-danger btn-sm">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr>
+            <td colspan="4" class="text-center">No event purchases found.</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<!-- Only ADMIN can add purchases -->
+@if (User.IsInRole("Admin"))
+{
+    <a asp-action="Create" class="btn btn-primary">Add Event Purchase</a>
+}

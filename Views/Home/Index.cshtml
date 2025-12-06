@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+
+<style>
+    body {
+        background: #e6f4ff; /* light sky blue */
+    }
+    .main-box {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        margin-top: 60px;
+    }
+    .btn-custom {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+</style>
+
+<div class="container">
+    <div class="main-box text-center">
+        <h1 class="display-4" style="color:#0077cc;">Welcome to eTickets!</h1>
+        <p class="lead">Your virtual event ticketing system made simple.</p>
+        <hr />
+
+        <!-- Show nothing until user logs in -->
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="d-flex justify-content-center gap-3 mt-4">
+
+                <!-- Show all 3 main buttons for ANY logged‑in user -->
+                <a asp-controller="Events" asp-action="Index" 
+                   class="btn btn-primary btn-custom">View Events</a>
+
+                <a asp-controller="Categories" asp-action="Index" 
+                   class="btn btn-secondary btn-custom">View Categories</a>
+
+                <a asp-controller="Purchases" asp-action="Index" 
+                   class="btn btn-success btn-custom">View Purchases</a>
+
+                <!-- Extra button only for Attendee -->
+                @if (User.IsInRole("Attendee"))
+                {
+                }
+            </div>
+        }
+    </div>
+</div>
+
+
+
+

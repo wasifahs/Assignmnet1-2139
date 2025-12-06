@@ -1,0 +1,1757 @@
+2025-11-30 23:20:49.264 -05:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-11-30 23:20:49.775 -05:00 [DBG] The index {'EventId'} was not created on entity type 'EventPurchase' as the properties are already covered by the index {'EventId', 'PurchaseId'}.
+2025-11-30 23:20:49.776 -05:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserRole<string>' as the properties are already covered by the index {'UserId', 'RoleId'}.
+2025-11-30 23:20:49.776 -05:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserToken<string>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}.
+2025-11-30 23:20:49.967 -05:00 [DBG] Entity Framework Core 9.0.0 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.1+2e9a27fa9e7c2988a39d98c9b89cafdcf5ccf42b' with options: None
+2025-11-30 23:20:51.879 -05:00 [DBG] 'ApplicationDbContext' disposed.
+2025-11-30 23:21:27.470 -05:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-11-30 23:21:27.864 -05:00 [DBG] The index {'EventId'} was not created on entity type 'EventPurchase' as the properties are already covered by the index {'EventId', 'PurchaseId'}.
+2025-11-30 23:21:27.865 -05:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserRole<string>' as the properties are already covered by the index {'UserId', 'RoleId'}.
+2025-11-30 23:21:27.865 -05:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserToken<string>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}.
+2025-11-30 23:21:28.047 -05:00 [DBG] Entity Framework Core 9.0.0 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.1+2e9a27fa9e7c2988a39d98c9b89cafdcf5ccf42b' with options: None
+2025-11-30 23:21:28.069 -05:00 [DBG] Creating DbConnection.
+2025-11-30 23:21:28.095 -05:00 [DBG] Created DbConnection. (23ms).
+2025-11-30 23:21:28.101 -05:00 [DBG] Opening connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:21:28.229 -05:00 [DBG] Opened connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:21:28.236 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-11-30 23:21:28.241 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (6ms).
+2025-11-30 23:21:28.243 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (10ms).
+2025-11-30 23:21:28.248 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-11-30 23:21:28.285 -05:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-11-30 23:21:28.310 -05:00 [DBG] Closing data reader to 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:21:28.317 -05:00 [DBG] A data reader for 'Assignment1_2139' on server 'tcp://localhost:5432' is being disposed after spending 28ms reading results.
+2025-11-30 23:21:28.319 -05:00 [DBG] Closing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:21:28.321 -05:00 [DBG] Closed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (2ms).
+2025-11-30 23:21:28.430 -05:00 [DBG] Migrating using database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:21:28.433 -05:00 [DBG] Opening connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:21:28.435 -05:00 [DBG] Opening connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:21:28.492 -05:00 [DBG] Opened connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:21:28.492 -05:00 [DBG] Closing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:21:28.495 -05:00 [DBG] Closed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (2ms).
+2025-11-30 23:21:28.496 -05:00 [DBG] Opening connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:21:28.496 -05:00 [DBG] Opened connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:21:28.537 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2025-11-30 23:21:28.537 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2025-11-30 23:21:28.537 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2025-11-30 23:21:28.537 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2025-11-30 23:21:28.546 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2025-11-30 23:21:28.549 -05:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2025-11-30 23:21:28.552 -05:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2025-11-30 23:21:28.553 -05:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-11-30 23:21:28.553 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2025-11-30 23:21:28.553 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2025-11-30 23:21:28.554 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2025-11-30 23:21:28.554 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+2025-11-30 23:21:28.556 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+2025-11-30 23:21:28.557 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-11-30 23:21:28.557 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:21:28.557 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:21:28.557 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-11-30 23:21:28.557 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-11-30 23:21:28.558 -05:00 [DBG] Closing data reader to 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:21:28.558 -05:00 [DBG] A data reader for 'Assignment1_2139' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results.
+2025-11-30 23:21:28.565 -05:00 [INF] Applying migration '20251201042051_AddCreatedByToPurchases'.
+2025-11-30 23:21:28.583 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2025-11-30 23:21:28.583 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2025-11-30 23:21:28.583 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2025-11-30 23:21:28.584 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Purchases" ADD "CreatedBy" text;
+2025-11-30 23:21:28.591 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Purchases" ADD "CreatedBy" text;
+2025-11-30 23:21:28.592 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2025-11-30 23:21:28.592 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2025-11-30 23:21:28.592 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2025-11-30 23:21:28.592 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Events" ALTER COLUMN "Description" DROP NOT NULL;
+2025-11-30 23:21:28.592 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Events" ALTER COLUMN "Description" DROP NOT NULL;
+2025-11-30 23:21:28.592 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2025-11-30 23:21:28.592 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2025-11-30 23:21:28.592 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2025-11-30 23:21:28.593 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "EventPurchases" ALTER COLUMN "UpdatedAt" DROP NOT NULL;
+2025-11-30 23:21:28.593 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "EventPurchases" ALTER COLUMN "UpdatedAt" DROP NOT NULL;
+2025-11-30 23:21:28.593 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2025-11-30 23:21:28.593 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2025-11-30 23:21:28.593 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2025-11-30 23:21:28.593 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20251201042051_AddCreatedByToPurchases', '9.0.0');
+2025-11-30 23:21:28.597 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20251201042051_AddCreatedByToPurchases', '9.0.0');
+2025-11-30 23:21:28.599 -05:00 [DBG] Committing transaction.
+2025-11-30 23:21:28.602 -05:00 [DBG] Committed transaction.
+2025-11-30 23:21:28.603 -05:00 [DBG] Disposing transaction.
+2025-11-30 23:21:28.603 -05:00 [DBG] Closing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:21:28.604 -05:00 [DBG] Closed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (0ms).
+2025-11-30 23:21:28.605 -05:00 [DBG] 'ApplicationDbContext' disposed.
+2025-11-30 23:21:28.606 -05:00 [DBG] Disposing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:21:28.607 -05:00 [DBG] Disposed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (0ms).
+2025-11-30 23:22:01.775 -05:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-11-30 23:22:01.887 -05:00 [INF] User profile is available. Using 'C:\Users\rezar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-30 23:22:02.533 -05:00 [DBG] The index {'EventId'} was not created on entity type 'EventPurchase' as the properties are already covered by the index {'EventId', 'PurchaseId'}.
+2025-11-30 23:22:02.534 -05:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserRole<string>' as the properties are already covered by the index {'UserId', 'RoleId'}.
+2025-11-30 23:22:02.535 -05:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserToken<string>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}.
+2025-11-30 23:22:02.838 -05:00 [DBG] Entity Framework Core 9.0.0 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.1+2e9a27fa9e7c2988a39d98c9b89cafdcf5ccf42b' with options: None
+2025-11-30 23:22:02.907 -05:00 [DBG] Compiling query expression: 
+'DbSet<IdentityRole>()
+    .FirstOrDefault(r => r.NormalizedName == __normalizedName_0)'
+2025-11-30 23:22:03.221 -05:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<IdentityRole>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<IdentityRole>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: IdentityRole.Id (string) Required PK AfterSave:Throw, 0], [Property: IdentityRole.ConcurrencyStamp (string) Concurrency, 1], [Property: IdentityRole.Name (string) MaxLength(256), 2], [Property: IdentityRole.NormalizedName (string) Index MaxLength(256), 3] }
+            SELECT TOP(1) a.Id, a.ConcurrencyStamp, a.Name, a.NormalizedName
+            FROM AspNetRoles AS a
+            WHERE a.NormalizedName == @__normalizedName_0) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: IdentityRole.Id (string) Required PK AfterSave:Throw, 0], [Property: IdentityRole.ConcurrencyStamp (string) Concurrency, 1], [Property: IdentityRole.Name (string) MaxLength(256), 2], [Property: IdentityRole.NormalizedName (string) Index MaxLength(256), 3] }
+            SELECT TOP(1) a.Id, a.ConcurrencyStamp, a.Name, a.NormalizedName
+            FROM AspNetRoles AS a
+            WHERE a.NormalizedName == @__normalizedName_0, 
+            False, 
+            new HashSet<string>(
+                new string[]{ }, 
+                StringComparer.Ordinal
+            )
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: null, 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            IdentityRole entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                IdentityRole instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(IdentityRole);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: IdentityRole.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityRole").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetString(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (IdentityRole)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: IdentityRole | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityRole")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: IdentityRole | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityRole")]: 
+                            {
+                                return 
+                                {
+                                    IdentityRole instance;
+                                    instance = new IdentityRole();
+                                    instance.<Id>k__BackingField = dataReader.GetString(0);
+                                    instance.<ConcurrencyStamp>k__BackingField = dataReader.IsDBNull(1) ? default(string) : dataReader.GetString(1);
+                                    instance.<Name>k__BackingField = dataReader.IsDBNull(2) ? default(string) : dataReader.GetString(2);
+                                    instance.<NormalizedName>k__BackingField = dataReader.IsDBNull(3) ? default(string) : dataReader.GetString(3);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: IdentityRole | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityRole")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(IdentityRole)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            return entity;
+        }, 
+        contextType: Assignment1_2139.Data.ApplicationDbContext, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)'
+2025-11-30 23:22:03.276 -05:00 [DBG] Creating DbConnection.
+2025-11-30 23:22:03.324 -05:00 [DBG] Created DbConnection. (45ms).
+2025-11-30 23:22:03.330 -05:00 [DBG] Opening connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.539 -05:00 [DBG] Opened connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.555 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-11-30 23:22:03.566 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (5ms).
+2025-11-30 23:22:03.578 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (23ms).
+2025-11-30 23:22:03.594 -05:00 [DBG] Executing DbCommand [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-11-30 23:22:03.712 -05:00 [INF] Executed DbCommand (118ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-11-30 23:22:03.797 -05:00 [DBG] Context 'ApplicationDbContext' started tracking 'IdentityRole' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-11-30 23:22:03.833 -05:00 [DBG] Closing data reader to 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.852 -05:00 [DBG] A data reader for 'Assignment1_2139' on server 'tcp://localhost:5432' is being disposed after spending 126ms reading results.
+2025-11-30 23:22:03.860 -05:00 [DBG] Closing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.868 -05:00 [DBG] Closed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (7ms).
+2025-11-30 23:22:03.875 -05:00 [DBG] Opening connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.875 -05:00 [DBG] Opened connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.876 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-11-30 23:22:03.876 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:22:03.876 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:22:03.876 -05:00 [DBG] Executing DbCommand [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-11-30 23:22:03.884 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-11-30 23:22:03.884 -05:00 [DBG] Context 'ApplicationDbContext' started tracking 'IdentityRole' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-11-30 23:22:03.885 -05:00 [DBG] Closing data reader to 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.885 -05:00 [DBG] A data reader for 'Assignment1_2139' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results.
+2025-11-30 23:22:03.885 -05:00 [DBG] Closing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.885 -05:00 [DBG] Closed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (0ms).
+2025-11-30 23:22:03.886 -05:00 [DBG] Opening connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.886 -05:00 [DBG] Opened connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.886 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-11-30 23:22:03.886 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:22:03.886 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:22:03.886 -05:00 [DBG] Executing DbCommand [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-11-30 23:22:03.888 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-11-30 23:22:03.888 -05:00 [DBG] Context 'ApplicationDbContext' started tracking 'IdentityRole' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-11-30 23:22:03.888 -05:00 [DBG] Closing data reader to 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.888 -05:00 [DBG] A data reader for 'Assignment1_2139' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results.
+2025-11-30 23:22:03.888 -05:00 [DBG] Closing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.888 -05:00 [DBG] Closed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (0ms).
+2025-11-30 23:22:03.892 -05:00 [DBG] Compiling query expression: 
+'DbSet<ApplicationUser>()
+    .SingleOrDefault(u => u.NormalizedEmail == __normalizedEmail_0)'
+2025-11-30 23:22:03.901 -05:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<ApplicationUser>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<ApplicationUser>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ApplicationUser.Id (string) Required PK AfterSave:Throw, 0], [Property: ApplicationUser.AccessFailedCount (int) Required, 1], [Property: ApplicationUser.ConcurrencyStamp (string) Concurrency, 2], [Property: ApplicationUser.DateOfBirth (DateTime?), 3], [Property: ApplicationUser.Email (string) MaxLength(256), 4], [Property: ApplicationUser.EmailConfirmed (bool) Required, 5], [Property: ApplicationUser.FullName (string) Required, 6], [Property: ApplicationUser.LockoutEnabled (bool) Required, 7], [Property: ApplicationUser.LockoutEnd (DateTimeOffset?), 8], [Property: ApplicationUser.NormalizedEmail (string) Index MaxLength(256), 9], [Property: ApplicationUser.NormalizedUserName (string) Index MaxLength(256), 10], [Property: ApplicationUser.PasswordHash (string), 11], [Property: ApplicationUser.PhoneNumber (string), 12], [Property: ApplicationUser.PhoneNumberConfirmed (bool) Required, 13], [Property: ApplicationUser.ProfilePictureUrl (string), 14], [Property: ApplicationUser.SecurityStamp (string), 15], [Property: ApplicationUser.TwoFactorEnabled (bool) Required, 16], [Property: ApplicationUser.UserName (string) MaxLength(256), 17] }
+            SELECT TOP(2) a.Id, a.AccessFailedCount, a.ConcurrencyStamp, a.DateOfBirth, a.Email, a.EmailConfirmed, a.FullName, a.LockoutEnabled, a.LockoutEnd, a.NormalizedEmail, a.NormalizedUserName, a.PasswordHash, a.PhoneNumber, a.PhoneNumberConfirmed, a.ProfilePictureUrl, a.SecurityStamp, a.TwoFactorEnabled, a.UserName
+            FROM AspNetUsers AS a
+            WHERE a.NormalizedEmail == @__normalizedEmail_0) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ApplicationUser.Id (string) Required PK AfterSave:Throw, 0], [Property: ApplicationUser.AccessFailedCount (int) Required, 1], [Property: ApplicationUser.ConcurrencyStamp (string) Concurrency, 2], [Property: ApplicationUser.DateOfBirth (DateTime?), 3], [Property: ApplicationUser.Email (string) MaxLength(256), 4], [Property: ApplicationUser.EmailConfirmed (bool) Required, 5], [Property: ApplicationUser.FullName (string) Required, 6], [Property: ApplicationUser.LockoutEnabled (bool) Required, 7], [Property: ApplicationUser.LockoutEnd (DateTimeOffset?), 8], [Property: ApplicationUser.NormalizedEmail (string) Index MaxLength(256), 9], [Property: ApplicationUser.NormalizedUserName (string) Index MaxLength(256), 10], [Property: ApplicationUser.PasswordHash (string), 11], [Property: ApplicationUser.PhoneNumber (string), 12], [Property: ApplicationUser.PhoneNumberConfirmed (bool) Required, 13], [Property: ApplicationUser.ProfilePictureUrl (string), 14], [Property: ApplicationUser.SecurityStamp (string), 15], [Property: ApplicationUser.TwoFactorEnabled (bool) Required, 16], [Property: ApplicationUser.UserName (string) MaxLength(256), 17] }
+            SELECT TOP(2) a.Id, a.AccessFailedCount, a.ConcurrencyStamp, a.DateOfBirth, a.Email, a.EmailConfirmed, a.FullName, a.LockoutEnabled, a.LockoutEnd, a.NormalizedEmail, a.NormalizedUserName, a.PasswordHash, a.PhoneNumber, a.PhoneNumberConfirmed, a.ProfilePictureUrl, a.SecurityStamp, a.TwoFactorEnabled, a.UserName
+            FROM AspNetUsers AS a
+            WHERE a.NormalizedEmail == @__normalizedEmail_0, 
+            False, 
+            new HashSet<string>(
+                new string[]{ }, 
+                StringComparer.Ordinal
+            )
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: null, 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            ApplicationUser entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                ApplicationUser instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(ApplicationUser);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: ApplicationUser.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("Assignment1_2139.Models.ApplicationUser").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetString(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (ApplicationUser)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: ApplicationUser | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.ApplicationUser")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: ApplicationUser | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.ApplicationUser")]: 
+                            {
+                                return 
+                                {
+                                    ApplicationUser instance;
+                                    instance = new ApplicationUser();
+                                    instance.<Id>k__BackingField = dataReader.GetString(0);
+                                    instance.<AccessFailedCount>k__BackingField = dataReader.GetInt32(1);
+                                    instance.<ConcurrencyStamp>k__BackingField = dataReader.IsDBNull(2) ? default(string) : dataReader.GetString(2);
+                                    instance.<DateOfBirth>k__BackingField = dataReader.IsDBNull(3) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(3);
+                                    instance.<Email>k__BackingField = dataReader.IsDBNull(4) ? default(string) : dataReader.GetString(4);
+                                    instance.<EmailConfirmed>k__BackingField = dataReader.GetBoolean(5);
+                                    instance.<FullName>k__BackingField = dataReader.GetString(6);
+                                    instance.<LockoutEnabled>k__BackingField = dataReader.GetBoolean(7);
+                                    instance.<LockoutEnd>k__BackingField = dataReader.IsDBNull(8) ? default(DateTimeOffset?) : (DateTimeOffset?)dataReader.GetFieldValue<DateTimeOffset>(8);
+                                    instance.<NormalizedEmail>k__BackingField = dataReader.IsDBNull(9) ? default(string) : dataReader.GetString(9);
+                                    instance.<NormalizedUserName>k__BackingField = dataReader.IsDBNull(10) ? default(string) : dataReader.GetString(10);
+                                    instance.<PasswordHash>k__BackingField = dataReader.IsDBNull(11) ? default(string) : dataReader.GetString(11);
+                                    instance.<PhoneNumber>k__BackingField = dataReader.IsDBNull(12) ? default(string) : dataReader.GetString(12);
+                                    instance.<PhoneNumberConfirmed>k__BackingField = dataReader.GetBoolean(13);
+                                    instance.<ProfilePictureUrl>k__BackingField = dataReader.IsDBNull(14) ? default(string) : dataReader.GetString(14);
+                                    instance.<SecurityStamp>k__BackingField = dataReader.IsDBNull(15) ? default(string) : dataReader.GetString(15);
+                                    instance.<TwoFactorEnabled>k__BackingField = dataReader.GetBoolean(16);
+                                    instance.<UserName>k__BackingField = dataReader.IsDBNull(17) ? default(string) : dataReader.GetString(17);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: ApplicationUser | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.ApplicationUser")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(ApplicationUser)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            return entity;
+        }, 
+        contextType: Assignment1_2139.Data.ApplicationDbContext, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)'
+2025-11-30 23:22:03.904 -05:00 [DBG] Opening connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.905 -05:00 [DBG] Opened connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.905 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-11-30 23:22:03.905 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:22:03.905 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:22:03.905 -05:00 [DBG] Executing DbCommand [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."DateOfBirth", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePictureUrl", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2025-11-30 23:22:03.907 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."DateOfBirth", a."Email", a."EmailConfirmed", a."FullName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."ProfilePictureUrl", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2025-11-30 23:22:03.932 -05:00 [DBG] Context 'ApplicationDbContext' started tracking 'ApplicationUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-11-30 23:22:03.988 -05:00 [DBG] Closing data reader to 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.988 -05:00 [DBG] A data reader for 'Assignment1_2139' on server 'tcp://localhost:5432' is being disposed after spending 80ms reading results.
+2025-11-30 23:22:03.988 -05:00 [DBG] Closing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.988 -05:00 [DBG] Closed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (0ms).
+2025-11-30 23:22:03.991 -05:00 [DBG] 'ApplicationDbContext' disposed.
+2025-11-30 23:22:03.995 -05:00 [DBG] Disposing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:03.997 -05:00 [DBG] Disposed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (2ms).
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Account/ForgotPassword.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Account/Login.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Account/Register.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Account/ResetPassword.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Analytics/MyAnalytics.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Categories/Create.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Categories/Delete.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Categories/Details.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Categories/Edit.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Categories/Index.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Dashboard/Index.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Dashboard/MyEvents.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Dashboard/MyTickets.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Dashboard/Profile.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Dashboard/PurchaseHistory.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/EventPurchases/Create.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/EventPurchases/Delete.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/EventPurchases/Details.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/EventPurchases/Edit.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/EventPurchases/Index.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Events/Create.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Events/Delete.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Events/Details.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Events/Edit.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Events/Index.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Home/Error404.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Home/Error500.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Home/Index.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Home/Privacy.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Purchases/Create.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Purchases/Delete.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Purchases/Details.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Purchases/Edit.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Purchases/Index.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Shared/Error.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Shared/_EventPartial.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Shared/_ValidationScriptsPartial.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/_ViewImports.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/_ViewStart.cshtml'.
+2025-11-30 23:22:04.027 -05:00 [DBG] Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'.
+2025-11-30 23:22:04.038 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-11-30 23:22:04.092 -05:00 [DBG] Hosting starting
+2025-11-30 23:22:04.112 -05:00 [DBG] Reading data from file 'C:\Users\rezar\AppData\Local\ASP.NET\DataProtection-Keys\key-b740ade5-7f8e-4cde-bdfc-f2a5d0daab32.xml'.
+2025-11-30 23:22:04.119 -05:00 [DBG] Found key {b740ade5-7f8e-4cde-bdfc-f2a5d0daab32}.
+2025-11-30 23:22:04.129 -05:00 [DBG] Considering key {b740ade5-7f8e-4cde-bdfc-f2a5d0daab32} with expiration date 2025-12-16 03:51:00Z as default key.
+2025-11-30 23:22:04.131 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-11-30 23:22:04.131 -05:00 [DBG] Decrypting secret element using Windows DPAPI.
+2025-11-30 23:22:04.133 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-11-30 23:22:04.135 -05:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2025-11-30 23:22:04.135 -05:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2025-11-30 23:22:04.136 -05:00 [DBG] Using key {b740ade5-7f8e-4cde-bdfc-f2a5d0daab32} as the default key.
+2025-11-30 23:22:04.137 -05:00 [DBG] Key ring with default key {b740ade5-7f8e-4cde-bdfc-f2a5d0daab32} was loaded during application startup.
+2025-11-30 23:22:04.168 -05:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-11-30 23:22:04.168 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-11-30 23:22:04.183 -05:00 [INF] Now listening on: http://localhost:5175
+2025-11-30 23:22:04.183 -05:00 [DBG] Loaded hosting startup assembly Assignment1-2139
+2025-11-30 23:22:04.183 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-30 23:22:04.183 -05:00 [INF] Hosting environment: Development
+2025-11-30 23:22:04.183 -05:00 [INF] Content root path: C:\Users\Public\comp2139\Assignment1-2139\Assignment1-2139
+2025-11-30 23:22:04.183 -05:00 [DBG] Hosting started
+2025-11-30 23:22:04.249 -05:00 [DBG] Connection id "0HNHGI4N8NE6V" received FIN.
+2025-11-30 23:22:04.256 -05:00 [DBG] Connection id "0HNHGI4N8NE6V" accepted.
+2025-11-30 23:22:04.257 -05:00 [DBG] Connection id "0HNHGI4N8NE6V" started.
+2025-11-30 23:22:04.263 -05:00 [DBG] Connection id "0HNHGI4N8NE6V" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-30 23:22:04.266 -05:00 [DBG] Connection id "0HNHGI4N8NE6V" disconnecting.
+2025-11-30 23:22:04.273 -05:00 [DBG] Connection id "0HNHGI4N8NE6V" stopped.
+2025-11-30 23:22:04.414 -05:00 [DBG] Connection id "0HNHGI4N8NE70" accepted.
+2025-11-30 23:22:04.414 -05:00 [DBG] Connection id "0HNHGI4N8NE70" started.
+2025-11-30 23:22:04.414 -05:00 [DBG] Connection id "0HNHGI4N8NE71" accepted.
+2025-11-30 23:22:04.415 -05:00 [DBG] Connection id "0HNHGI4N8NE71" started.
+2025-11-30 23:22:04.483 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5175/ - null null
+2025-11-30 23:22:04.485 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-11-30 23:22:04.487 -05:00 [DBG] The request path / does not match a supported file type
+2025-11-30 23:22:04.528 -05:00 [DBG] 1 candidate(s) found for the request path '/'
+2025-11-30 23:22:04.530 -05:00 [DBG] Endpoint 'Assignment1_2139.Controllers.HomeController.Index (Assignment1-2139)' with route pattern '{controller=Home}/{action=Index}/{id?}' is valid for the request path '/'
+2025-11-30 23:22:04.531 -05:00 [DBG] Request matched endpoint 'Assignment1_2139.Controllers.HomeController.Index (Assignment1-2139)'
+2025-11-30 23:22:04.551 -05:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2025-11-30 23:22:04.554 -05:00 [INF] Executing endpoint 'Assignment1_2139.Controllers.HomeController.Index (Assignment1-2139)'
+2025-11-30 23:22:04.576 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Assignment1_2139.Controllers.HomeController (Assignment1-2139).
+2025-11-30 23:22:04.577 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-11-30 23:22:04.577 -05:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2025-11-30 23:22:04.579 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2025-11-30 23:22:04.579 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-11-30 23:22:04.580 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2025-11-30 23:22:04.584 -05:00 [DBG] Executing controller factory for controller Assignment1_2139.Controllers.HomeController (Assignment1-2139)
+2025-11-30 23:22:04.586 -05:00 [DBG] Executed controller factory for controller Assignment1_2139.Controllers.HomeController (Assignment1-2139)
+2025-11-30 23:22:04.595 -05:00 [INF] Executing action method Assignment1_2139.Controllers.HomeController.Index (Assignment1-2139) - Validation state: "Valid"
+2025-11-30 23:22:04.686 -05:00 [DBG] Entity Framework Core 9.0.0 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.1+2e9a27fa9e7c2988a39d98c9b89cafdcf5ccf42b' with options: None
+2025-11-30 23:22:04.700 -05:00 [DBG] Compiling query expression: 
+'DbSet<Event>()
+    .Include(e => e.Category)'
+2025-11-30 23:22:04.722 -05:00 [DBG] Including navigation: 'Event.Category'.
+2025-11-30 23:22:04.817 -05:00 [DBG] Generated query execution expression: 
+'queryContext => SingleQueryingEnumerable.Create<Event>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Client Projections:
+            0 -> Dictionary<IProperty, int> { [Property: Event.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Event.AvailableTickets (int) Required, 1], [Property: Event.CategoryId (int) Required FK Index, 2], [Property: Event.CreatedAt (DateTime) Required, 3], [Property: Event.CreatedByUserId (string) Required, 4], [Property: Event.Description (string) MaxLength(1000), 5], [Property: Event.EndDate (DateTime) Required, 6], [Property: Event.EventStatus (Status) Required, 7], [Property: Event.StartDate (DateTime) Required, 8], [Property: Event.TicketPrice (decimal) Required, 9], [Property: Event.Title (string) Required MaxLength(200), 10], [Property: Event.UpdatedAt (DateTime?), 11] }
+            1 -> Dictionary<IProperty, int> { [Property: Category.CategoryId (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 12], [Property: Category.Name (string) Required MaxLength(100), 13] }
+        SELECT e.Id, e.AvailableTickets, e.CategoryId, e.CreatedAt, e.CreatedByUserId, e.Description, e.EndDate, e.EventStatus, e.StartDate, e.TicketPrice, e.Title, e.UpdatedAt, c.CategoryId, c.Name
+        FROM Events AS e
+        INNER JOIN Categories AS c ON e.CategoryId == c.CategoryId) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Client Projections:
+            0 -> Dictionary<IProperty, int> { [Property: Event.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Event.AvailableTickets (int) Required, 1], [Property: Event.CategoryId (int) Required FK Index, 2], [Property: Event.CreatedAt (DateTime) Required, 3], [Property: Event.CreatedByUserId (string) Required, 4], [Property: Event.Description (string) MaxLength(1000), 5], [Property: Event.EndDate (DateTime) Required, 6], [Property: Event.EventStatus (Status) Required, 7], [Property: Event.StartDate (DateTime) Required, 8], [Property: Event.TicketPrice (decimal) Required, 9], [Property: Event.Title (string) Required MaxLength(200), 10], [Property: Event.UpdatedAt (DateTime?), 11] }
+            1 -> Dictionary<IProperty, int> { [Property: Category.CategoryId (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 12], [Property: Category.Name (string) Required MaxLength(100), 13] }
+        SELECT e.Id, e.AvailableTickets, e.CategoryId, e.CreatedAt, e.CreatedByUserId, e.Description, e.EndDate, e.EventStatus, e.StartDate, e.TicketPrice, e.Title, e.UpdatedAt, c.CategoryId, c.Name
+        FROM Events AS e
+        INNER JOIN Categories AS c ON e.CategoryId == c.CategoryId, 
+        False, 
+        new HashSet<string>(
+            new string[]{ }, 
+            StringComparer.Ordinal
+        )
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        Event entity;
+        Category entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            Event instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(Event);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: Event.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (Event)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: Event | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: Event | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event")]: 
+                        {
+                            return 
+                            {
+                                Event instance;
+                                instance = new Event();
+                                instance.<Id>k__BackingField = dataReader.GetInt32(0);
+                                instance.<AvailableTickets>k__BackingField = dataReader.GetInt32(1);
+                                instance.<CategoryId>k__BackingField = dataReader.GetInt32(2);
+                                instance.<CreatedAt>k__BackingField = dataReader.GetDateTime(3);
+                                instance.<CreatedByUserId>k__BackingField = dataReader.GetString(4);
+                                instance.<Description>k__BackingField = dataReader.IsDBNull(5) ? default(string) : dataReader.GetString(5);
+                                instance.<EndDate>k__BackingField = dataReader.GetDateTime(6);
+                                instance.<EventStatus>k__BackingField = Invoke(((EnumToNumberConverter<Status, int>)((IReadOnlyProperty)[LIFTABLE Constant: Property: Event.EventStatus (Status) Required | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event").FindProperty("EventStatus")]).GetTypeMapping().Converter).ConvertFromProviderTyped, dataReader.GetInt32(7));
+                                instance.<StartDate>k__BackingField = dataReader.GetDateTime(8);
+                                instance.<TicketPrice>k__BackingField = dataReader.GetDecimal(9);
+                                instance.<Title>k__BackingField = dataReader.GetString(10);
+                                instance.<UpdatedAt>k__BackingField = dataReader.IsDBNull(11) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(11);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: Event | Resolver: namelessParameter{3} => namelessParameter{3}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(Event)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        entity = 
+        {
+            MaterializationContext materializationContext2;
+            IEntityType entityType2;
+            Category instance2;
+            InternalEntityEntry entry2;
+            bool hasNullKey2;
+            materializationContext2 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance2 = default(Category);
+            entry2 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: Category.CategoryId PK | Resolver: c => c.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Category").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetInt32(12) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey2);
+            !(hasNullKey2) ? entry2 != default(InternalEntityEntry) ? 
+            {
+                entityType2 = entry2.EntityType;
+                return instance2 = (Category)entry2.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot2;
+                shadowSnapshot2 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType2 = [LIFTABLE Constant: EntityType: Category | Resolver: namelessParameter{4} => namelessParameter{4}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Category")];
+                instance2 = switch (entityType2)
+                {
+                    case [LIFTABLE Constant: EntityType: Category | Resolver: namelessParameter{5} => namelessParameter{5}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Category")]: 
+                        {
+                            return 
+                            {
+                                Category instance;
+                                instance = new Category();
+                                instance.<CategoryId>k__BackingField = dataReader.GetInt32(12);
+                                instance.<Name>k__BackingField = dataReader.GetString(13);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext2.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: Category | Resolver: namelessParameter{6} => namelessParameter{6}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Category")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(Category)
+                }
+                ;
+                entry2 = entityType2 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType2, 
+                    entity: instance2, 
+                    snapshot: shadowSnapshot2);
+                return instance2;
+            } : default(void);
+            return instance2;
+        };
+        ShaperProcessingExpressionVisitor.IncludeReference<Event, Event, Category>(
+            queryContext: queryContext, 
+            entity: entity, 
+            relatedEntity: entity, 
+            navigation: [LIFTABLE Constant: Navigation: Event.Category (Category) ToPrincipal Category Inverse: Events | Resolver: namelessParameter{7} => namelessParameter{7}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event").FindNavigation("Category")], 
+            inverseNavigation: [LIFTABLE Constant: Navigation: Category.Events (ICollection<Event>) Collection ToDependent Event Inverse: Category | Resolver: namelessParameter{8} => namelessParameter{8}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Category").FindNavigation("Events")], 
+            fixup: (namelessParameter{9}, namelessParameter{10}) => 
+            {
+                namelessParameter{9}.<Category>k__BackingField = namelessParameter{10};
+                return [LIFTABLE Constant: ClrICollectionAccessor<Category, ICollection<Event>, Event> | Resolver: namelessParameter{11} => namelessParameter{11}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Category").FindNavigation("Events").GetCollectionAccessor()].Add(
+                    entity: namelessParameter{10}, 
+                    value: namelessParameter{9}, 
+                    forMaterialization: True);
+            }, 
+            trackingQuery: True);
+        return entity;
+    }, 
+    contextType: Assignment1_2139.Data.ApplicationDbContext, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)'
+2025-11-30 23:22:04.821 -05:00 [DBG] Creating DbConnection.
+2025-11-30 23:22:04.821 -05:00 [DBG] Created DbConnection. (0ms).
+2025-11-30 23:22:04.821 -05:00 [DBG] Opening connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:04.821 -05:00 [DBG] Opened connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:04.821 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-11-30 23:22:04.821 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:22:04.821 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:22:04.821 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."AvailableTickets", e."CategoryId", e."CreatedAt", e."CreatedByUserId", e."Description", e."EndDate", e."EventStatus", e."StartDate", e."TicketPrice", e."Title", e."UpdatedAt", c."CategoryId", c."Name"
+FROM "Events" AS e
+INNER JOIN "Categories" AS c ON e."CategoryId" = c."CategoryId"
+2025-11-30 23:22:04.824 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id", e."AvailableTickets", e."CategoryId", e."CreatedAt", e."CreatedByUserId", e."Description", e."EndDate", e."EventStatus", e."StartDate", e."TicketPrice", e."Title", e."UpdatedAt", c."CategoryId", c."Name"
+FROM "Events" AS e
+INNER JOIN "Categories" AS c ON e."CategoryId" = c."CategoryId"
+2025-11-30 23:22:04.854 -05:00 [DBG] Context 'ApplicationDbContext' started tracking 'Event' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-11-30 23:22:04.918 -05:00 [DBG] The navigation 'Event.Category' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-11-30 23:22:04.924 -05:00 [DBG] Context 'ApplicationDbContext' started tracking 'Category' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-11-30 23:22:04.930 -05:00 [DBG] Closing data reader to 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:04.930 -05:00 [DBG] A data reader for 'Assignment1_2139' on server 'tcp://localhost:5432' is being disposed after spending 106ms reading results.
+2025-11-30 23:22:04.930 -05:00 [DBG] Closing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:04.931 -05:00 [DBG] Closed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (0ms).
+2025-11-30 23:22:04.942 -05:00 [INF] Executed action method Assignment1_2139.Controllers.HomeController.Index (Assignment1-2139), returned result Microsoft.AspNetCore.Mvc.ViewResult in 339.3381ms.
+2025-11-30 23:22:04.958 -05:00 [DBG] View lookup cache miss for view 'Index' in controller 'Home'.
+2025-11-30 23:22:04.967 -05:00 [INF] Executing ViewResult, running view Index.
+2025-11-30 23:22:04.974 -05:00 [DBG] The view path '/Views/Home/Index.cshtml' was found in 10.5638ms.
+2025-11-30 23:22:05.009 -05:00 [DBG] View lookup cache miss for view '_EventPartial' in controller 'Home'.
+2025-11-30 23:22:05.071 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (id=[3],action=[Details],controller=[Events])
+2025-11-30 23:22:05.076 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Events/Details/3 and 
+2025-11-30 23:22:05.077 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Events/Details/3
+2025-11-30 23:22:05.085 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Events])
+2025-11-30 23:22:05.087 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Events and 
+2025-11-30 23:22:05.087 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Events
+2025-11-30 23:22:05.088 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Categories])
+2025-11-30 23:22:05.088 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Categories and 
+2025-11-30 23:22:05.088 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Categories
+2025-11-30 23:22:05.089 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Purchases])
+2025-11-30 23:22:05.089 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Purchases and 
+2025-11-30 23:22:05.089 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Purchases
+2025-11-30 23:22:05.091 -05:00 [DBG] View lookup cache miss for view '_Layout' in controller 'Home'.
+2025-11-30 23:22:05.154 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (area=[],action=[Index],controller=[Home])
+2025-11-30 23:22:05.154 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in  and 
+2025-11-30 23:22:05.154 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /
+2025-11-30 23:22:05.155 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Events])
+2025-11-30 23:22:05.156 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Events and 
+2025-11-30 23:22:05.156 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Events
+2025-11-30 23:22:05.157 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Categories])
+2025-11-30 23:22:05.157 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Categories and 
+2025-11-30 23:22:05.157 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Categories
+2025-11-30 23:22:05.158 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Purchases])
+2025-11-30 23:22:05.158 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Purchases and 
+2025-11-30 23:22:05.158 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Purchases
+2025-11-30 23:22:05.165 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[GeneralSearch],controller=[Home])
+2025-11-30 23:22:05.166 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Home/GeneralSearch and 
+2025-11-30 23:22:05.166 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Home/GeneralSearch
+2025-11-30 23:22:05.184 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[AddToCart],controller=[Events])
+2025-11-30 23:22:05.184 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Events/AddToCart and 
+2025-11-30 23:22:05.184 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Events/AddToCart
+2025-11-30 23:22:05.197 -05:00 [INF] Executed ViewResult - view Index executed in 239.7797ms.
+2025-11-30 23:22:05.202 -05:00 [INF] Executed action Assignment1_2139.Controllers.HomeController.Index (Assignment1-2139) in 621.5283ms
+2025-11-30 23:22:05.204 -05:00 [INF] Executed endpoint 'Assignment1_2139.Controllers.HomeController.Index (Assignment1-2139)'
+2025-11-30 23:22:05.215 -05:00 [DBG] Connection id "0HNHGI4N8NE70" completed keep alive response.
+2025-11-30 23:22:05.222 -05:00 [DBG] 'ApplicationDbContext' disposed.
+2025-11-30 23:22:05.230 -05:00 [DBG] Disposing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:05.232 -05:00 [DBG] Disposed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (3ms).
+2025-11-30 23:22:05.234 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5175/ - 200 null text/html; charset=utf-8 754.5031ms
+2025-11-30 23:22:05.248 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5175/Assignment1.styles.css - null null
+2025-11-30 23:22:05.249 -05:00 [DBG] The request path /Assignment1.styles.css does not match an existing file
+2025-11-30 23:22:05.252 -05:00 [DBG] No candidates found for the request path '/Assignment1.styles.css'
+2025-11-30 23:22:05.252 -05:00 [DBG] Request did not match any endpoints
+2025-11-30 23:22:05.254 -05:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2025-11-30 23:22:05.255 -05:00 [DBG] Connection id "0HNHGI4N8NE70" completed keep alive response.
+2025-11-30 23:22:05.255 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5175/Assignment1.styles.css - 404 0 null 7.3253ms
+2025-11-30 23:22:05.256 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5175/Assignment1.styles.css, Response status code: 404
+2025-11-30 23:22:06.854 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5175/Purchases - null null
+2025-11-30 23:22:06.855 -05:00 [DBG] The request path /Purchases does not match a supported file type
+2025-11-30 23:22:06.856 -05:00 [DBG] 1 candidate(s) found for the request path '/Purchases'
+2025-11-30 23:22:06.856 -05:00 [DBG] Endpoint 'Assignment1_2139.Controllers.PurchasesController.Index (Assignment1-2139)' with route pattern '{controller=Home}/{action=Index}/{id?}' is valid for the request path '/Purchases'
+2025-11-30 23:22:06.857 -05:00 [DBG] Request matched endpoint 'Assignment1_2139.Controllers.PurchasesController.Index (Assignment1-2139)'
+2025-11-30 23:22:06.859 -05:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2025-11-30 23:22:06.862 -05:00 [INF] Executing endpoint 'Assignment1_2139.Controllers.PurchasesController.Index (Assignment1-2139)'
+2025-11-30 23:22:06.870 -05:00 [INF] Route matched with {action = "Index", controller = "Purchases"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Assignment1_2139.Controllers.PurchasesController (Assignment1-2139).
+2025-11-30 23:22:06.870 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-11-30 23:22:06.870 -05:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2025-11-30 23:22:06.870 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2025-11-30 23:22:06.870 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-11-30 23:22:06.870 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2025-11-30 23:22:06.870 -05:00 [DBG] Executing controller factory for controller Assignment1_2139.Controllers.PurchasesController (Assignment1-2139)
+2025-11-30 23:22:06.872 -05:00 [DBG] Executed controller factory for controller Assignment1_2139.Controllers.PurchasesController (Assignment1-2139)
+2025-11-30 23:22:06.873 -05:00 [INF] Executing action method Assignment1_2139.Controllers.PurchasesController.Index (Assignment1-2139) - Validation state: "Valid"
+2025-11-30 23:22:06.889 -05:00 [DBG] Entity Framework Core 9.0.0 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.1+2e9a27fa9e7c2988a39d98c9b89cafdcf5ccf42b' with options: None
+2025-11-30 23:22:06.892 -05:00 [DBG] Compiling query expression: 
+'DbSet<Purchase>()
+    .Include(p => p.EventPurchases)
+    .ThenInclude(ep => ep.Event)'
+2025-11-30 23:22:06.893 -05:00 [DBG] Including navigation: 'Purchase.EventPurchases'.
+2025-11-30 23:22:06.900 -05:00 [DBG] Including navigation: 'EventPurchase.Event'.
+2025-11-30 23:22:06.957 -05:00 [DBG] Generated query execution expression: 
+'queryContext => SingleQueryingEnumerable.Create<Purchase>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Client Projections:
+            0 -> Dictionary<IProperty, int> { [Property: Purchase.PurchaseId (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Purchase.CreatedAt (DateTime) Required, 1], [Property: Purchase.CreatedBy (string), 2], [Property: Purchase.GuestEmail (string) Required, 3], [Property: Purchase.GuestName (string) Required MaxLength(100), 4], [Property: Purchase.ModifiedAt (DateTime?), 5], [Property: Purchase.ModifiedBy (string), 6], [Property: Purchase.PurchaseDate (DateTime) Required, 7], [Property: Purchase.TotalCost (decimal) Required, 8], [Property: Purchase.UpdatedAt (DateTime?), 9], [Property: Purchase.UserId (string) Required, 10] }
+            1 -> 0
+            2 -> Dictionary<IProperty, int> { [Property: EventPurchase.EventId (int) Required PK FK AfterSave:Throw, 11], [Property: EventPurchase.PurchaseId (int) Required PK FK Index AfterSave:Throw, 12], [Property: EventPurchase.CreatedAt (DateTime) Required, 13], [Property: EventPurchase.CreatedBy (string) Required MaxLength(256), 14], [Property: EventPurchase.ModifiedAt (DateTime?), 15], [Property: EventPurchase.ModifiedBy (string) MaxLength(256), 16], [Property: EventPurchase.PurchaseDate (DateTime) Required, 17], [Property: EventPurchase.Rating (int?), 18], [Property: EventPurchase.TicketQuantity (int) Required, 19], [Property: EventPurchase.UpdatedAt (DateTime?), 20] }
+            3 -> Dictionary<IProperty, int> { [Property: Event.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 21], [Property: Event.AvailableTickets (int) Required, 22], [Property: Event.CategoryId (int) Required FK Index, 23], [Property: Event.CreatedAt (DateTime) Required, 24], [Property: Event.CreatedByUserId (string) Required, 25], [Property: Event.Description (string) MaxLength(1000), 26], [Property: Event.EndDate (DateTime) Required, 27], [Property: Event.EventStatus (Status) Required, 28], [Property: Event.StartDate (DateTime) Required, 29], [Property: Event.TicketPrice (decimal) Required, 30], [Property: Event.Title (string) Required MaxLength(200), 31], [Property: Event.UpdatedAt (DateTime?), 32] }
+            4 -> 11
+            5 -> 12
+            6 -> 21
+        SELECT p.PurchaseId, p.CreatedAt, p.CreatedBy, p.GuestEmail, p.GuestName, p.ModifiedAt, p.ModifiedBy, p.PurchaseDate, p.TotalCost, p.UpdatedAt, p.UserId, s.EventId, s.PurchaseId, s.CreatedAt, s.CreatedBy, s.ModifiedAt, s.ModifiedBy, s.PurchaseDate, s.Rating, s.TicketQuantity, s.UpdatedAt, s.Id, s.AvailableTickets, s.CategoryId, s.CreatedAt0, s.CreatedByUserId, s.Description, s.EndDate, s.EventStatus, s.StartDate, s.TicketPrice, s.Title, s.UpdatedAt0
+        FROM Purchases AS p
+        LEFT JOIN 
+        (
+            SELECT e.EventId, e.PurchaseId, e.CreatedAt, e.CreatedBy, e.ModifiedAt, e.ModifiedBy, e.PurchaseDate, e.Rating, e.TicketQuantity, e.UpdatedAt, e0.Id, e0.AvailableTickets, e0.CategoryId, e0.CreatedAt AS CreatedAt0, e0.CreatedByUserId, e0.Description, e0.EndDate, e0.EventStatus, e0.StartDate, e0.TicketPrice, e0.Title, e0.UpdatedAt AS UpdatedAt0
+            FROM EventPurchases AS e
+            INNER JOIN Events AS e0 ON e.EventId == e0.Id
+        ) AS s ON p.PurchaseId == s.PurchaseId
+        ORDER BY p.PurchaseId ASC, s.EventId ASC, s.PurchaseId ASC) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Client Projections:
+            0 -> Dictionary<IProperty, int> { [Property: Purchase.PurchaseId (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Purchase.CreatedAt (DateTime) Required, 1], [Property: Purchase.CreatedBy (string), 2], [Property: Purchase.GuestEmail (string) Required, 3], [Property: Purchase.GuestName (string) Required MaxLength(100), 4], [Property: Purchase.ModifiedAt (DateTime?), 5], [Property: Purchase.ModifiedBy (string), 6], [Property: Purchase.PurchaseDate (DateTime) Required, 7], [Property: Purchase.TotalCost (decimal) Required, 8], [Property: Purchase.UpdatedAt (DateTime?), 9], [Property: Purchase.UserId (string) Required, 10] }
+            1 -> 0
+            2 -> Dictionary<IProperty, int> { [Property: EventPurchase.EventId (int) Required PK FK AfterSave:Throw, 11], [Property: EventPurchase.PurchaseId (int) Required PK FK Index AfterSave:Throw, 12], [Property: EventPurchase.CreatedAt (DateTime) Required, 13], [Property: EventPurchase.CreatedBy (string) Required MaxLength(256), 14], [Property: EventPurchase.ModifiedAt (DateTime?), 15], [Property: EventPurchase.ModifiedBy (string) MaxLength(256), 16], [Property: EventPurchase.PurchaseDate (DateTime) Required, 17], [Property: EventPurchase.Rating (int?), 18], [Property: EventPurchase.TicketQuantity (int) Required, 19], [Property: EventPurchase.UpdatedAt (DateTime?), 20] }
+            3 -> Dictionary<IProperty, int> { [Property: Event.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 21], [Property: Event.AvailableTickets (int) Required, 22], [Property: Event.CategoryId (int) Required FK Index, 23], [Property: Event.CreatedAt (DateTime) Required, 24], [Property: Event.CreatedByUserId (string) Required, 25], [Property: Event.Description (string) MaxLength(1000), 26], [Property: Event.EndDate (DateTime) Required, 27], [Property: Event.EventStatus (Status) Required, 28], [Property: Event.StartDate (DateTime) Required, 29], [Property: Event.TicketPrice (decimal) Required, 30], [Property: Event.Title (string) Required MaxLength(200), 31], [Property: Event.UpdatedAt (DateTime?), 32] }
+            4 -> 11
+            5 -> 12
+            6 -> 21
+        SELECT p.PurchaseId, p.CreatedAt, p.CreatedBy, p.GuestEmail, p.GuestName, p.ModifiedAt, p.ModifiedBy, p.PurchaseDate, p.TotalCost, p.UpdatedAt, p.UserId, s.EventId, s.PurchaseId, s.CreatedAt, s.CreatedBy, s.ModifiedAt, s.ModifiedBy, s.PurchaseDate, s.Rating, s.TicketQuantity, s.UpdatedAt, s.Id, s.AvailableTickets, s.CategoryId, s.CreatedAt0, s.CreatedByUserId, s.Description, s.EndDate, s.EventStatus, s.StartDate, s.TicketPrice, s.Title, s.UpdatedAt0
+        FROM Purchases AS p
+        LEFT JOIN 
+        (
+            SELECT e.EventId, e.PurchaseId, e.CreatedAt, e.CreatedBy, e.ModifiedAt, e.ModifiedBy, e.PurchaseDate, e.Rating, e.TicketQuantity, e.UpdatedAt, e0.Id, e0.AvailableTickets, e0.CategoryId, e0.CreatedAt AS CreatedAt0, e0.CreatedByUserId, e0.Description, e0.EndDate, e0.EventStatus, e0.StartDate, e0.TicketPrice, e0.Title, e0.UpdatedAt AS UpdatedAt0
+            FROM EventPurchases AS e
+            INNER JOIN Events AS e0 ON e.EventId == e0.Id
+        ) AS s ON p.PurchaseId == s.PurchaseId
+        ORDER BY p.PurchaseId ASC, s.EventId ASC, s.PurchaseId ASC, 
+        False, 
+        new HashSet<string>(
+            new string[]{ }, 
+            StringComparer.Ordinal
+        )
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        resultContext.Values == null ? 
+        {
+            Purchase entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                Purchase instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(Purchase);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: Purchase.PurchaseId PK | Resolver: c => c.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Purchase").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (Purchase)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: Purchase | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Purchase")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: Purchase | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Purchase")]: 
+                            {
+                                return 
+                                {
+                                    Purchase instance;
+                                    instance = new Purchase();
+                                    instance.<PurchaseId>k__BackingField = dataReader.GetInt32(0);
+                                    instance.<CreatedAt>k__BackingField = dataReader.GetDateTime(1);
+                                    instance.<CreatedBy>k__BackingField = dataReader.IsDBNull(2) ? default(string) : dataReader.GetString(2);
+                                    instance.<GuestEmail>k__BackingField = dataReader.GetString(3);
+                                    instance.<GuestName>k__BackingField = dataReader.GetString(4);
+                                    instance.<ModifiedAt>k__BackingField = dataReader.IsDBNull(5) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(5);
+                                    instance.<ModifiedBy>k__BackingField = dataReader.IsDBNull(6) ? default(string) : dataReader.GetString(6);
+                                    instance.<PurchaseDate>k__BackingField = dataReader.GetDateTime(7);
+                                    instance.<TotalCost>k__BackingField = dataReader.GetDecimal(8);
+                                    instance.<UpdatedAt>k__BackingField = dataReader.IsDBNull(9) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(9);
+                                    instance.<UserId>k__BackingField = dataReader.GetString(10);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: Purchase | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Purchase")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(Purchase)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            resultContext.Values = new object[]{ entity };
+            ShaperProcessingExpressionVisitor.InitializeIncludeCollection<Purchase, Purchase>(
+                collectionId: 0, 
+                queryContext: queryContext, 
+                dbDataReader: dataReader, 
+                resultCoordinator: resultCoordinator, 
+                entity: (Purchase)(resultContext.Values[0]), 
+                parentIdentifier: (queryContext, dataReader) => new object[]{ (object)(int?)dataReader.GetInt32(0) }, 
+                outerIdentifier: (queryContext, dataReader) => new object[]{ (object)(int?)dataReader.GetInt32(0) }, 
+                navigation: [LIFTABLE Constant: Navigation: Purchase.EventPurchases (ICollection<EventPurchase>) Collection ToDependent EventPurchase Inverse: Purchase | Resolver: namelessParameter{3} => namelessParameter{3}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Purchase").FindNavigation("EventPurchases")], 
+                clrCollectionAccessor: [LIFTABLE Constant: ClrICollectionAccessor<Purchase, ICollection<EventPurchase>, EventPurchase> | Resolver: namelessParameter{4} => namelessParameter{4}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Purchase").FindNavigation("EventPurchases").GetCollectionAccessor()], 
+                trackingQuery: True, 
+                setLoaded: True);
+        } : default(void);
+        ShaperProcessingExpressionVisitor.PopulateIncludeCollection<Purchase, EventPurchase>(
+            collectionId: 0, 
+            queryContext: queryContext, 
+            dbDataReader: dataReader, 
+            resultCoordinator: resultCoordinator, 
+            parentIdentifier: (queryContext, dataReader) => new object[]{ (object)(int?)dataReader.GetInt32(0) }, 
+            outerIdentifier: (queryContext, dataReader) => new object[]{ (object)(int?)dataReader.GetInt32(0) }, 
+            selfIdentifier: (queryContext, dataReader) => new object[]
+            { 
+                (object)dataReader.IsDBNull(11) ? default(int?) : (int?)dataReader.GetInt32(11), 
+                (object)dataReader.IsDBNull(12) ? default(int?) : (int?)dataReader.GetInt32(12), 
+                (object)dataReader.IsDBNull(21) ? default(int?) : (int?)dataReader.GetInt32(21) 
+            }, 
+            parentIdentifierValueComparers: [LIFTABLE Constant: Func<object, object, bool>[] { Func<object, object, bool> } | Resolver: _ => new Func<object, object, bool>[]{ (left, right) => left == null ? right == null : right != null && Invoke((v1, v2) => v1 == v2, (int)left, (int)right) }], 
+            outerIdentifierValueComparers: [LIFTABLE Constant: Func<object, object, bool>[] { Func<object, object, bool> } | Resolver: _ => new Func<object, object, bool>[]{ (left, right) => left == null ? right == null : right != null && Invoke((v1, v2) => v1 == v2, (int)left, (int)right) }], 
+            selfIdentifierValueComparers: [LIFTABLE Constant: Func<object, object, bool>[] { Func<object, object, bool>, Func<object, object, bool>, Func<object, object, bool> } | Resolver: _ => new Func<object, object, bool>[]
+            { 
+                (left, right) => left == null ? right == null : right != null && Invoke((v1, v2) => v1 == v2, (int)left, (int)right), 
+                (left, right) => left == null ? right == null : right != null && Invoke((v1, v2) => v1 == v2, (int)left, (int)right), 
+                (left, right) => left == null ? right == null : right != null && Invoke((v1, v2) => v1 == v2, (int)left, (int)right) 
+            }], 
+            innerShaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+            {
+                EventPurchase entity;
+                Event entity;
+                entity = 
+                {
+                    MaterializationContext materializationContext2;
+                    IEntityType entityType2;
+                    EventPurchase instance2;
+                    InternalEntityEntry entry2;
+                    bool hasNullKey2;
+                    materializationContext2 = new MaterializationContext(
+                        [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                        queryContext.Context
+                    );
+                    instance2 = default(EventPurchase);
+                    entry2 = queryContext.TryGetEntry(
+                        key: [LIFTABLE Constant: Key: EventPurchase.EventId, EventPurchase.PurchaseId PK | Resolver: c => c.Dependencies.Model.FindEntityType("Assignment1_2139.Models.EventPurchase").FindPrimaryKey()], 
+                        keyValues: new object[]
+                        { 
+                            dataReader.IsDBNull(11) ? default(object) : (object)dataReader.GetInt32(11), 
+                            dataReader.IsDBNull(12) ? default(object) : (object)dataReader.GetInt32(12) 
+                        }, 
+                        throwOnNullKey: False, 
+                        hasNullKey: hasNullKey2);
+                    !(hasNullKey2) ? entry2 != default(InternalEntityEntry) ? 
+                    {
+                        entityType2 = entry2.EntityType;
+                        return instance2 = (EventPurchase)entry2.Entity;
+                    } : 
+                    {
+                        ISnapshot shadowSnapshot2;
+                        shadowSnapshot2 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                        entityType2 = [LIFTABLE Constant: EntityType: EventPurchase | Resolver: namelessParameter{5} => namelessParameter{5}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.EventPurchase")];
+                        instance2 = switch (entityType2)
+                        {
+                            case [LIFTABLE Constant: EntityType: EventPurchase | Resolver: namelessParameter{6} => namelessParameter{6}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.EventPurchase")]: 
+                                {
+                                    return 
+                                    {
+                                        EventPurchase instance;
+                                        instance = new EventPurchase();
+                                        instance.<EventId>k__BackingField = dataReader.IsDBNull(11) ? default(int) : dataReader.GetInt32(11);
+                                        instance.<PurchaseId>k__BackingField = dataReader.IsDBNull(12) ? default(int) : dataReader.GetInt32(12);
+                                        instance.<CreatedAt>k__BackingField = dataReader.IsDBNull(13) ? default(DateTime) : dataReader.GetDateTime(13);
+                                        instance.<CreatedBy>k__BackingField = dataReader.IsDBNull(14) ? default(string) : dataReader.GetString(14);
+                                        instance.<ModifiedAt>k__BackingField = dataReader.IsDBNull(15) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(15);
+                                        instance.<ModifiedBy>k__BackingField = dataReader.IsDBNull(16) ? default(string) : dataReader.GetString(16);
+                                        instance.<PurchaseDate>k__BackingField = dataReader.IsDBNull(17) ? default(DateTime) : dataReader.GetDateTime(17);
+                                        instance.<Rating>k__BackingField = dataReader.IsDBNull(18) ? default(int?) : (int?)dataReader.GetInt32(18);
+                                        instance.<TicketQuantity>k__BackingField = dataReader.IsDBNull(19) ? default(int) : dataReader.GetInt32(19);
+                                        instance.<UpdatedAt>k__BackingField = dataReader.IsDBNull(20) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(20);
+                                        (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                            context: materializationContext2.Context, 
+                                            entity: instance, 
+                                            queryTrackingBehavior: TrackAll, 
+                                            structuralType: [LIFTABLE Constant: EntityType: EventPurchase | Resolver: namelessParameter{7} => namelessParameter{7}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.EventPurchase")]) : default(void);
+                                        return instance;
+                                    }}
+                            default: 
+                                default(EventPurchase)
+                        }
+                        ;
+                        entry2 = entityType2 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                            entityType: entityType2, 
+                            entity: instance2, 
+                            snapshot: shadowSnapshot2);
+                        return instance2;
+                    } : default(void);
+                    return instance2;
+                };
+                entity = 
+                {
+                    MaterializationContext materializationContext3;
+                    IEntityType entityType3;
+                    Event instance3;
+                    InternalEntityEntry entry3;
+                    bool hasNullKey3;
+                    materializationContext3 = new MaterializationContext(
+                        [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                        queryContext.Context
+                    );
+                    instance3 = default(Event);
+                    entry3 = queryContext.TryGetEntry(
+                        key: [LIFTABLE Constant: Key: Event.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event").FindPrimaryKey()], 
+                        keyValues: new object[]{ dataReader.IsDBNull(21) ? default(object) : (object)dataReader.GetInt32(21) }, 
+                        throwOnNullKey: False, 
+                        hasNullKey: hasNullKey3);
+                    !(hasNullKey3) ? entry3 != default(InternalEntityEntry) ? 
+                    {
+                        entityType3 = entry3.EntityType;
+                        return instance3 = (Event)entry3.Entity;
+                    } : 
+                    {
+                        ISnapshot shadowSnapshot3;
+                        shadowSnapshot3 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                        entityType3 = [LIFTABLE Constant: EntityType: Event | Resolver: namelessParameter{8} => namelessParameter{8}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event")];
+                        instance3 = switch (entityType3)
+                        {
+                            case [LIFTABLE Constant: EntityType: Event | Resolver: namelessParameter{9} => namelessParameter{9}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event")]: 
+                                {
+                                    return 
+                                    {
+                                        Event instance;
+                                        instance = new Event();
+                                        instance.<Id>k__BackingField = dataReader.IsDBNull(21) ? default(int) : dataReader.GetInt32(21);
+                                        instance.<AvailableTickets>k__BackingField = dataReader.IsDBNull(22) ? default(int) : dataReader.GetInt32(22);
+                                        instance.<CategoryId>k__BackingField = dataReader.IsDBNull(23) ? default(int) : dataReader.GetInt32(23);
+                                        instance.<CreatedAt>k__BackingField = dataReader.IsDBNull(24) ? default(DateTime) : dataReader.GetDateTime(24);
+                                        instance.<CreatedByUserId>k__BackingField = dataReader.IsDBNull(25) ? default(string) : dataReader.GetString(25);
+                                        instance.<Description>k__BackingField = dataReader.IsDBNull(26) ? default(string) : dataReader.GetString(26);
+                                        instance.<EndDate>k__BackingField = dataReader.IsDBNull(27) ? default(DateTime) : dataReader.GetDateTime(27);
+                                        instance.<EventStatus>k__BackingField = dataReader.IsDBNull(28) ? default(Status) : Invoke(((EnumToNumberConverter<Status, int>)((IReadOnlyProperty)[LIFTABLE Constant: Property: Event.EventStatus (Status) Required | Resolver: namelessParameter{10} => namelessParameter{10}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event").FindProperty("EventStatus")]).GetTypeMapping().Converter).ConvertFromProviderTyped, dataReader.GetInt32(28));
+                                        instance.<StartDate>k__BackingField = dataReader.IsDBNull(29) ? default(DateTime) : dataReader.GetDateTime(29);
+                                        instance.<TicketPrice>k__BackingField = dataReader.IsDBNull(30) ? default(decimal) : dataReader.GetDecimal(30);
+                                        instance.<Title>k__BackingField = dataReader.IsDBNull(31) ? default(string) : dataReader.GetString(31);
+                                        instance.<UpdatedAt>k__BackingField = dataReader.IsDBNull(32) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(32);
+                                        (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                            context: materializationContext3.Context, 
+                                            entity: instance, 
+                                            queryTrackingBehavior: TrackAll, 
+                                            structuralType: [LIFTABLE Constant: EntityType: Event | Resolver: namelessParameter{11} => namelessParameter{11}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event")]) : default(void);
+                                        return instance;
+                                    }}
+                            default: 
+                                default(Event)
+                        }
+                        ;
+                        entry3 = entityType3 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                            entityType: entityType3, 
+                            entity: instance3, 
+                            snapshot: shadowSnapshot3);
+                        return instance3;
+                    } : default(void);
+                    return instance3;
+                };
+                ShaperProcessingExpressionVisitor.IncludeReference<EventPurchase, EventPurchase, Event>(
+                    queryContext: queryContext, 
+                    entity: entity, 
+                    relatedEntity: entity, 
+                    navigation: [LIFTABLE Constant: Navigation: EventPurchase.Event (Event) ToPrincipal Event Inverse: EventPurchases | Resolver: namelessParameter{12} => namelessParameter{12}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.EventPurchase").FindNavigation("Event")], 
+                    inverseNavigation: [LIFTABLE Constant: Navigation: Event.EventPurchases (ICollection<EventPurchase>) Collection ToDependent EventPurchase Inverse: Event | Resolver: namelessParameter{13} => namelessParameter{13}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event").FindNavigation("EventPurchases")], 
+                    fixup: (namelessParameter{14}, namelessParameter{15}) => 
+                    {
+                        namelessParameter{14}.<Event>k__BackingField = namelessParameter{15};
+                        return [LIFTABLE Constant: ClrICollectionAccessor<Event, ICollection<EventPurchase>, EventPurchase> | Resolver: namelessParameter{16} => namelessParameter{16}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event").FindNavigation("EventPurchases").GetCollectionAccessor()].Add(
+                            entity: namelessParameter{15}, 
+                            value: namelessParameter{14}, 
+                            forMaterialization: True);
+                    }, 
+                    trackingQuery: True);
+                return entity;
+            }, 
+            inverseNavigation: [LIFTABLE Constant: Navigation: EventPurchase.Purchase (Purchase) ToPrincipal Purchase Inverse: EventPurchases | Resolver: namelessParameter{17} => namelessParameter{17}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.EventPurchase").FindNavigation("Purchase")], 
+            fixup: (namelessParameter{18}, namelessParameter{19}) => 
+            {
+                [LIFTABLE Constant: ClrICollectionAccessor<Purchase, ICollection<EventPurchase>, EventPurchase> | Resolver: namelessParameter{20} => namelessParameter{20}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Purchase").FindNavigation("EventPurchases").GetCollectionAccessor()].Add(
+                    entity: namelessParameter{18}, 
+                    value: namelessParameter{19}, 
+                    forMaterialization: True);
+                return namelessParameter{19}.<Purchase>k__BackingField = namelessParameter{18};
+            }, 
+            trackingQuery: True);
+        return IsTrue(resultCoordinator.ResultReady)
+         ? (Purchase)(resultContext.Values[0]) : default(Purchase);
+    }, 
+    contextType: Assignment1_2139.Data.ApplicationDbContext, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)'
+2025-11-30 23:22:06.965 -05:00 [DBG] Creating DbConnection.
+2025-11-30 23:22:06.965 -05:00 [DBG] Created DbConnection. (0ms).
+2025-11-30 23:22:06.965 -05:00 [DBG] Opening connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:06.965 -05:00 [DBG] Opened connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:06.965 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-11-30 23:22:06.965 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:22:06.965 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:22:06.966 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."PurchaseId", p."CreatedAt", p."CreatedBy", p."GuestEmail", p."GuestName", p."ModifiedAt", p."ModifiedBy", p."PurchaseDate", p."TotalCost", p."UpdatedAt", p."UserId", s."EventId", s."PurchaseId", s."CreatedAt", s."CreatedBy", s."ModifiedAt", s."ModifiedBy", s."PurchaseDate", s."Rating", s."TicketQuantity", s."UpdatedAt", s."Id", s."AvailableTickets", s."CategoryId", s."CreatedAt0", s."CreatedByUserId", s."Description", s."EndDate", s."EventStatus", s."StartDate", s."TicketPrice", s."Title", s."UpdatedAt0"
+FROM "Purchases" AS p
+LEFT JOIN (
+    SELECT e."EventId", e."PurchaseId", e."CreatedAt", e."CreatedBy", e."ModifiedAt", e."ModifiedBy", e."PurchaseDate", e."Rating", e."TicketQuantity", e."UpdatedAt", e0."Id", e0."AvailableTickets", e0."CategoryId", e0."CreatedAt" AS "CreatedAt0", e0."CreatedByUserId", e0."Description", e0."EndDate", e0."EventStatus", e0."StartDate", e0."TicketPrice", e0."Title", e0."UpdatedAt" AS "UpdatedAt0"
+    FROM "EventPurchases" AS e
+    INNER JOIN "Events" AS e0 ON e."EventId" = e0."Id"
+) AS s ON p."PurchaseId" = s."PurchaseId"
+ORDER BY p."PurchaseId", s."EventId", s."PurchaseId"
+2025-11-30 23:22:06.968 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."PurchaseId", p."CreatedAt", p."CreatedBy", p."GuestEmail", p."GuestName", p."ModifiedAt", p."ModifiedBy", p."PurchaseDate", p."TotalCost", p."UpdatedAt", p."UserId", s."EventId", s."PurchaseId", s."CreatedAt", s."CreatedBy", s."ModifiedAt", s."ModifiedBy", s."PurchaseDate", s."Rating", s."TicketQuantity", s."UpdatedAt", s."Id", s."AvailableTickets", s."CategoryId", s."CreatedAt0", s."CreatedByUserId", s."Description", s."EndDate", s."EventStatus", s."StartDate", s."TicketPrice", s."Title", s."UpdatedAt0"
+FROM "Purchases" AS p
+LEFT JOIN (
+    SELECT e."EventId", e."PurchaseId", e."CreatedAt", e."CreatedBy", e."ModifiedAt", e."ModifiedBy", e."PurchaseDate", e."Rating", e."TicketQuantity", e."UpdatedAt", e0."Id", e0."AvailableTickets", e0."CategoryId", e0."CreatedAt" AS "CreatedAt0", e0."CreatedByUserId", e0."Description", e0."EndDate", e0."EventStatus", e0."StartDate", e0."TicketPrice", e0."Title", e0."UpdatedAt" AS "UpdatedAt0"
+    FROM "EventPurchases" AS e
+    INNER JOIN "Events" AS e0 ON e."EventId" = e0."Id"
+) AS s ON p."PurchaseId" = s."PurchaseId"
+ORDER BY p."PurchaseId", s."EventId", s."PurchaseId"
+2025-11-30 23:22:06.973 -05:00 [DBG] Context 'ApplicationDbContext' started tracking 'Purchase' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-11-30 23:22:07.022 -05:00 [DBG] Closing data reader to 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:07.022 -05:00 [DBG] A data reader for 'Assignment1_2139' on server 'tcp://localhost:5432' is being disposed after spending 54ms reading results.
+2025-11-30 23:22:07.022 -05:00 [DBG] Closing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:07.022 -05:00 [DBG] Closed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (0ms).
+2025-11-30 23:22:07.023 -05:00 [INF] Executed action method Assignment1_2139.Controllers.PurchasesController.Index (Assignment1-2139), returned result Microsoft.AspNetCore.Mvc.ViewResult in 150.088ms.
+2025-11-30 23:22:07.023 -05:00 [DBG] View lookup cache miss for view 'Index' in controller 'Purchases'.
+2025-11-30 23:22:07.025 -05:00 [INF] Executing ViewResult, running view Index.
+2025-11-30 23:22:07.025 -05:00 [DBG] The view path '/Views/Purchases/Index.cshtml' was found in 1.5524ms.
+2025-11-30 23:22:07.043 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (purchaseId=[14],action=[Details],controller=[Purchases])
+2025-11-30 23:22:07.043 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Purchases/Details and ?purchaseId=14
+2025-11-30 23:22:07.043 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Purchases/Details?purchaseId=14
+2025-11-30 23:22:07.045 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (purchaseId=[14],action=[Edit],controller=[Purchases])
+2025-11-30 23:22:07.045 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Purchases/Edit and ?purchaseId=14
+2025-11-30 23:22:07.045 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Purchases/Edit?purchaseId=14
+2025-11-30 23:22:07.047 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (purchaseId=[14],action=[Delete],controller=[Purchases])
+2025-11-30 23:22:07.048 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Purchases/Delete and ?purchaseId=14
+2025-11-30 23:22:07.048 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Purchases/Delete?purchaseId=14
+2025-11-30 23:22:07.050 -05:00 [DBG] View lookup cache miss for view '_Layout' in controller 'Purchases'.
+2025-11-30 23:22:07.052 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (area=[],action=[Index],controller=[Home])
+2025-11-30 23:22:07.052 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in  and 
+2025-11-30 23:22:07.052 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /
+2025-11-30 23:22:07.052 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Events])
+2025-11-30 23:22:07.052 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Events and 
+2025-11-30 23:22:07.052 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Events
+2025-11-30 23:22:07.052 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Categories])
+2025-11-30 23:22:07.052 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Categories and 
+2025-11-30 23:22:07.052 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Categories
+2025-11-30 23:22:07.052 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Purchases])
+2025-11-30 23:22:07.052 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Purchases and 
+2025-11-30 23:22:07.052 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Purchases
+2025-11-30 23:22:07.053 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[GeneralSearch],controller=[Home])
+2025-11-30 23:22:07.053 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Home/GeneralSearch and 
+2025-11-30 23:22:07.053 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Home/GeneralSearch
+2025-11-30 23:22:07.053 -05:00 [INF] Executed ViewResult - view Index executed in 29.8479ms.
+2025-11-30 23:22:07.053 -05:00 [INF] Executed action Assignment1_2139.Controllers.PurchasesController.Index (Assignment1-2139) in 183.0657ms
+2025-11-30 23:22:07.053 -05:00 [INF] Executed endpoint 'Assignment1_2139.Controllers.PurchasesController.Index (Assignment1-2139)'
+2025-11-30 23:22:07.053 -05:00 [DBG] Connection id "0HNHGI4N8NE70" completed keep alive response.
+2025-11-30 23:22:07.054 -05:00 [DBG] 'ApplicationDbContext' disposed.
+2025-11-30 23:22:07.054 -05:00 [DBG] Disposing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:07.054 -05:00 [DBG] Disposed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (0ms).
+2025-11-30 23:22:07.054 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5175/Purchases - 200 null text/html; charset=utf-8 199.3511ms
+2025-11-30 23:22:07.094 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5175/Assignment1.styles.css - null null
+2025-11-30 23:22:07.094 -05:00 [DBG] The request path /Assignment1.styles.css does not match an existing file
+2025-11-30 23:22:07.094 -05:00 [DBG] No candidates found for the request path '/Assignment1.styles.css'
+2025-11-30 23:22:07.094 -05:00 [DBG] Request did not match any endpoints
+2025-11-30 23:22:07.094 -05:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2025-11-30 23:22:07.095 -05:00 [DBG] Connection id "0HNHGI4N8NE70" completed keep alive response.
+2025-11-30 23:22:07.095 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5175/Assignment1.styles.css - 404 0 null 1.092ms
+2025-11-30 23:22:07.095 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5175/Assignment1.styles.css, Response status code: 404
+2025-11-30 23:22:09.068 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5175/Purchases/Details?purchaseId=14 - null null
+2025-11-30 23:22:09.069 -05:00 [DBG] The request path /Purchases/Details does not match a supported file type
+2025-11-30 23:22:09.069 -05:00 [DBG] 1 candidate(s) found for the request path '/Purchases/Details'
+2025-11-30 23:22:09.069 -05:00 [DBG] Endpoint 'Assignment1_2139.Controllers.PurchasesController.Details (Assignment1-2139)' with route pattern '{controller=Home}/{action=Index}/{id?}' is valid for the request path '/Purchases/Details'
+2025-11-30 23:22:09.069 -05:00 [DBG] Request matched endpoint 'Assignment1_2139.Controllers.PurchasesController.Details (Assignment1-2139)'
+2025-11-30 23:22:09.069 -05:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2025-11-30 23:22:09.072 -05:00 [INF] Executing endpoint 'Assignment1_2139.Controllers.PurchasesController.Details (Assignment1-2139)'
+2025-11-30 23:22:09.088 -05:00 [INF] Route matched with {action = "Details", controller = "Purchases"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(Int32) on controller Assignment1_2139.Controllers.PurchasesController (Assignment1-2139).
+2025-11-30 23:22:09.088 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-11-30 23:22:09.088 -05:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2025-11-30 23:22:09.088 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2025-11-30 23:22:09.088 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-11-30 23:22:09.089 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2025-11-30 23:22:09.089 -05:00 [DBG] Executing controller factory for controller Assignment1_2139.Controllers.PurchasesController (Assignment1-2139)
+2025-11-30 23:22:09.091 -05:00 [DBG] Executed controller factory for controller Assignment1_2139.Controllers.PurchasesController (Assignment1-2139)
+2025-11-30 23:22:09.104 -05:00 [DBG] Attempting to bind parameter 'purchaseId' of type 'System.Int32' ...
+2025-11-30 23:22:09.107 -05:00 [DBG] Attempting to bind parameter 'purchaseId' of type 'System.Int32' using the name 'purchaseId' in request data ...
+2025-11-30 23:22:09.110 -05:00 [DBG] Done attempting to bind parameter 'purchaseId' of type 'System.Int32'.
+2025-11-30 23:22:09.110 -05:00 [DBG] Done attempting to bind parameter 'purchaseId' of type 'System.Int32'.
+2025-11-30 23:22:09.110 -05:00 [DBG] Attempting to validate the bound parameter 'purchaseId' of type 'System.Int32' ...
+2025-11-30 23:22:09.111 -05:00 [DBG] Done attempting to validate the bound parameter 'purchaseId' of type 'System.Int32'.
+2025-11-30 23:22:09.116 -05:00 [INF] Executing action method Assignment1_2139.Controllers.PurchasesController.Details (Assignment1-2139) - Validation state: "Valid"
+2025-11-30 23:22:09.119 -05:00 [DBG] Entity Framework Core 9.0.0 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.1+2e9a27fa9e7c2988a39d98c9b89cafdcf5ccf42b' with options: None
+2025-11-30 23:22:09.120 -05:00 [DBG] Compiling query expression: 
+'DbSet<Purchase>()
+    .Include(p => p.EventPurchases)
+    .ThenInclude(ep => ep.Event)
+    .FirstOrDefault(p => p.PurchaseId == __purchaseId_0)'
+2025-11-30 23:22:09.122 -05:00 [DBG] Including navigation: 'Purchase.EventPurchases'.
+2025-11-30 23:22:09.122 -05:00 [DBG] Including navigation: 'EventPurchase.Event'.
+2025-11-30 23:22:09.146 -05:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<Purchase>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<Purchase>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Client Projections:
+                0 -> Dictionary<IProperty, int> { [Property: Purchase.PurchaseId (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Purchase.CreatedAt (DateTime) Required, 1], [Property: Purchase.CreatedBy (string), 2], [Property: Purchase.GuestEmail (string) Required, 3], [Property: Purchase.GuestName (string) Required MaxLength(100), 4], [Property: Purchase.ModifiedAt (DateTime?), 5], [Property: Purchase.ModifiedBy (string), 6], [Property: Purchase.PurchaseDate (DateTime) Required, 7], [Property: Purchase.TotalCost (decimal) Required, 8], [Property: Purchase.UpdatedAt (DateTime?), 9], [Property: Purchase.UserId (string) Required, 10] }
+                1 -> 0
+                2 -> Dictionary<IProperty, int> { [Property: EventPurchase.EventId (int) Required PK FK AfterSave:Throw, 11], [Property: EventPurchase.PurchaseId (int) Required PK FK Index AfterSave:Throw, 12], [Property: EventPurchase.CreatedAt (DateTime) Required, 13], [Property: EventPurchase.CreatedBy (string) Required MaxLength(256), 14], [Property: EventPurchase.ModifiedAt (DateTime?), 15], [Property: EventPurchase.ModifiedBy (string) MaxLength(256), 16], [Property: EventPurchase.PurchaseDate (DateTime) Required, 17], [Property: EventPurchase.Rating (int?), 18], [Property: EventPurchase.TicketQuantity (int) Required, 19], [Property: EventPurchase.UpdatedAt (DateTime?), 20] }
+                3 -> Dictionary<IProperty, int> { [Property: Event.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 21], [Property: Event.AvailableTickets (int) Required, 22], [Property: Event.CategoryId (int) Required FK Index, 23], [Property: Event.CreatedAt (DateTime) Required, 24], [Property: Event.CreatedByUserId (string) Required, 25], [Property: Event.Description (string) MaxLength(1000), 26], [Property: Event.EndDate (DateTime) Required, 27], [Property: Event.EventStatus (Status) Required, 28], [Property: Event.StartDate (DateTime) Required, 29], [Property: Event.TicketPrice (decimal) Required, 30], [Property: Event.Title (string) Required MaxLength(200), 31], [Property: Event.UpdatedAt (DateTime?), 32] }
+                4 -> 11
+                5 -> 12
+                6 -> 21
+            SELECT p0.PurchaseId, p0.CreatedAt, p0.CreatedBy, p0.GuestEmail, p0.GuestName, p0.ModifiedAt, p0.ModifiedBy, p0.PurchaseDate, p0.TotalCost, p0.UpdatedAt, p0.UserId, s.EventId, s.PurchaseId, s.CreatedAt, s.CreatedBy, s.ModifiedAt, s.ModifiedBy, s.PurchaseDate, s.Rating, s.TicketQuantity, s.UpdatedAt, s.Id, s.AvailableTickets, s.CategoryId, s.CreatedAt0, s.CreatedByUserId, s.Description, s.EndDate, s.EventStatus, s.StartDate, s.TicketPrice, s.Title, s.UpdatedAt0
+            FROM 
+            (
+                SELECT TOP(1) p.PurchaseId, p.CreatedAt, p.CreatedBy, p.GuestEmail, p.GuestName, p.ModifiedAt, p.ModifiedBy, p.PurchaseDate, p.TotalCost, p.UpdatedAt, p.UserId
+                FROM Purchases AS p
+                WHERE p.PurchaseId == @__purchaseId_0
+            ) AS p0
+            LEFT JOIN 
+            (
+                SELECT e.EventId, e.PurchaseId, e.CreatedAt, e.CreatedBy, e.ModifiedAt, e.ModifiedBy, e.PurchaseDate, e.Rating, e.TicketQuantity, e.UpdatedAt, e0.Id, e0.AvailableTickets, e0.CategoryId, e0.CreatedAt AS CreatedAt0, e0.CreatedByUserId, e0.Description, e0.EndDate, e0.EventStatus, e0.StartDate, e0.TicketPrice, e0.Title, e0.UpdatedAt AS UpdatedAt0
+                FROM EventPurchases AS e
+                INNER JOIN Events AS e0 ON e.EventId == e0.Id
+            ) AS s ON p0.PurchaseId == s.PurchaseId
+            ORDER BY p0.PurchaseId ASC, s.EventId ASC, s.PurchaseId ASC) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Client Projections:
+                0 -> Dictionary<IProperty, int> { [Property: Purchase.PurchaseId (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Purchase.CreatedAt (DateTime) Required, 1], [Property: Purchase.CreatedBy (string), 2], [Property: Purchase.GuestEmail (string) Required, 3], [Property: Purchase.GuestName (string) Required MaxLength(100), 4], [Property: Purchase.ModifiedAt (DateTime?), 5], [Property: Purchase.ModifiedBy (string), 6], [Property: Purchase.PurchaseDate (DateTime) Required, 7], [Property: Purchase.TotalCost (decimal) Required, 8], [Property: Purchase.UpdatedAt (DateTime?), 9], [Property: Purchase.UserId (string) Required, 10] }
+                1 -> 0
+                2 -> Dictionary<IProperty, int> { [Property: EventPurchase.EventId (int) Required PK FK AfterSave:Throw, 11], [Property: EventPurchase.PurchaseId (int) Required PK FK Index AfterSave:Throw, 12], [Property: EventPurchase.CreatedAt (DateTime) Required, 13], [Property: EventPurchase.CreatedBy (string) Required MaxLength(256), 14], [Property: EventPurchase.ModifiedAt (DateTime?), 15], [Property: EventPurchase.ModifiedBy (string) MaxLength(256), 16], [Property: EventPurchase.PurchaseDate (DateTime) Required, 17], [Property: EventPurchase.Rating (int?), 18], [Property: EventPurchase.TicketQuantity (int) Required, 19], [Property: EventPurchase.UpdatedAt (DateTime?), 20] }
+                3 -> Dictionary<IProperty, int> { [Property: Event.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 21], [Property: Event.AvailableTickets (int) Required, 22], [Property: Event.CategoryId (int) Required FK Index, 23], [Property: Event.CreatedAt (DateTime) Required, 24], [Property: Event.CreatedByUserId (string) Required, 25], [Property: Event.Description (string) MaxLength(1000), 26], [Property: Event.EndDate (DateTime) Required, 27], [Property: Event.EventStatus (Status) Required, 28], [Property: Event.StartDate (DateTime) Required, 29], [Property: Event.TicketPrice (decimal) Required, 30], [Property: Event.Title (string) Required MaxLength(200), 31], [Property: Event.UpdatedAt (DateTime?), 32] }
+                4 -> 11
+                5 -> 12
+                6 -> 21
+            SELECT p0.PurchaseId, p0.CreatedAt, p0.CreatedBy, p0.GuestEmail, p0.GuestName, p0.ModifiedAt, p0.ModifiedBy, p0.PurchaseDate, p0.TotalCost, p0.UpdatedAt, p0.UserId, s.EventId, s.PurchaseId, s.CreatedAt, s.CreatedBy, s.ModifiedAt, s.ModifiedBy, s.PurchaseDate, s.Rating, s.TicketQuantity, s.UpdatedAt, s.Id, s.AvailableTickets, s.CategoryId, s.CreatedAt0, s.CreatedByUserId, s.Description, s.EndDate, s.EventStatus, s.StartDate, s.TicketPrice, s.Title, s.UpdatedAt0
+            FROM 
+            (
+                SELECT TOP(1) p.PurchaseId, p.CreatedAt, p.CreatedBy, p.GuestEmail, p.GuestName, p.ModifiedAt, p.ModifiedBy, p.PurchaseDate, p.TotalCost, p.UpdatedAt, p.UserId
+                FROM Purchases AS p
+                WHERE p.PurchaseId == @__purchaseId_0
+            ) AS p0
+            LEFT JOIN 
+            (
+                SELECT e.EventId, e.PurchaseId, e.CreatedAt, e.CreatedBy, e.ModifiedAt, e.ModifiedBy, e.PurchaseDate, e.Rating, e.TicketQuantity, e.UpdatedAt, e0.Id, e0.AvailableTickets, e0.CategoryId, e0.CreatedAt AS CreatedAt0, e0.CreatedByUserId, e0.Description, e0.EndDate, e0.EventStatus, e0.StartDate, e0.TicketPrice, e0.Title, e0.UpdatedAt AS UpdatedAt0
+                FROM EventPurchases AS e
+                INNER JOIN Events AS e0 ON e.EventId == e0.Id
+            ) AS s ON p0.PurchaseId == s.PurchaseId
+            ORDER BY p0.PurchaseId ASC, s.EventId ASC, s.PurchaseId ASC, 
+            False, 
+            new HashSet<string>(
+                new string[]{ }, 
+                StringComparer.Ordinal
+            )
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: null, 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            resultContext.Values == null ? 
+            {
+                Purchase entity;
+                entity = 
+                {
+                    MaterializationContext materializationContext1;
+                    IEntityType entityType1;
+                    Purchase instance1;
+                    InternalEntityEntry entry1;
+                    bool hasNullKey1;
+                    materializationContext1 = new MaterializationContext(
+                        [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                        queryContext.Context
+                    );
+                    instance1 = default(Purchase);
+                    entry1 = queryContext.TryGetEntry(
+                        key: [LIFTABLE Constant: Key: Purchase.PurchaseId PK | Resolver: c => c.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Purchase").FindPrimaryKey()], 
+                        keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                        throwOnNullKey: True, 
+                        hasNullKey: hasNullKey1);
+                    !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                    {
+                        entityType1 = entry1.EntityType;
+                        return instance1 = (Purchase)entry1.Entity;
+                    } : 
+                    {
+                        ISnapshot shadowSnapshot1;
+                        shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                        entityType1 = [LIFTABLE Constant: EntityType: Purchase | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Purchase")];
+                        instance1 = switch (entityType1)
+                        {
+                            case [LIFTABLE Constant: EntityType: Purchase | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Purchase")]: 
+                                {
+                                    return 
+                                    {
+                                        Purchase instance;
+                                        instance = new Purchase();
+                                        instance.<PurchaseId>k__BackingField = dataReader.GetInt32(0);
+                                        instance.<CreatedAt>k__BackingField = dataReader.GetDateTime(1);
+                                        instance.<CreatedBy>k__BackingField = dataReader.IsDBNull(2) ? default(string) : dataReader.GetString(2);
+                                        instance.<GuestEmail>k__BackingField = dataReader.GetString(3);
+                                        instance.<GuestName>k__BackingField = dataReader.GetString(4);
+                                        instance.<ModifiedAt>k__BackingField = dataReader.IsDBNull(5) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(5);
+                                        instance.<ModifiedBy>k__BackingField = dataReader.IsDBNull(6) ? default(string) : dataReader.GetString(6);
+                                        instance.<PurchaseDate>k__BackingField = dataReader.GetDateTime(7);
+                                        instance.<TotalCost>k__BackingField = dataReader.GetDecimal(8);
+                                        instance.<UpdatedAt>k__BackingField = dataReader.IsDBNull(9) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(9);
+                                        instance.<UserId>k__BackingField = dataReader.GetString(10);
+                                        (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                            context: materializationContext1.Context, 
+                                            entity: instance, 
+                                            queryTrackingBehavior: TrackAll, 
+                                            structuralType: [LIFTABLE Constant: EntityType: Purchase | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Purchase")]) : default(void);
+                                        return instance;
+                                    }}
+                            default: 
+                                default(Purchase)
+                        }
+                        ;
+                        entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                            entityType: entityType1, 
+                            entity: instance1, 
+                            snapshot: shadowSnapshot1);
+                        return instance1;
+                    } : default(void);
+                    return instance1;
+                };
+                resultContext.Values = new object[]{ entity };
+                ShaperProcessingExpressionVisitor.InitializeIncludeCollection<Purchase, Purchase>(
+                    collectionId: 0, 
+                    queryContext: queryContext, 
+                    dbDataReader: dataReader, 
+                    resultCoordinator: resultCoordinator, 
+                    entity: (Purchase)(resultContext.Values[0]), 
+                    parentIdentifier: (queryContext, dataReader) => new object[]{ (object)(int?)dataReader.GetInt32(0) }, 
+                    outerIdentifier: (queryContext, dataReader) => new object[]{ (object)(int?)dataReader.GetInt32(0) }, 
+                    navigation: [LIFTABLE Constant: Navigation: Purchase.EventPurchases (ICollection<EventPurchase>) Collection ToDependent EventPurchase Inverse: Purchase | Resolver: namelessParameter{3} => namelessParameter{3}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Purchase").FindNavigation("EventPurchases")], 
+                    clrCollectionAccessor: [LIFTABLE Constant: ClrICollectionAccessor<Purchase, ICollection<EventPurchase>, EventPurchase> | Resolver: namelessParameter{4} => namelessParameter{4}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Purchase").FindNavigation("EventPurchases").GetCollectionAccessor()], 
+                    trackingQuery: True, 
+                    setLoaded: True);
+            } : default(void);
+            ShaperProcessingExpressionVisitor.PopulateIncludeCollection<Purchase, EventPurchase>(
+                collectionId: 0, 
+                queryContext: queryContext, 
+                dbDataReader: dataReader, 
+                resultCoordinator: resultCoordinator, 
+                parentIdentifier: (queryContext, dataReader) => new object[]{ (object)(int?)dataReader.GetInt32(0) }, 
+                outerIdentifier: (queryContext, dataReader) => new object[]{ (object)(int?)dataReader.GetInt32(0) }, 
+                selfIdentifier: (queryContext, dataReader) => new object[]
+                { 
+                    (object)dataReader.IsDBNull(11) ? default(int?) : (int?)dataReader.GetInt32(11), 
+                    (object)dataReader.IsDBNull(12) ? default(int?) : (int?)dataReader.GetInt32(12), 
+                    (object)dataReader.IsDBNull(21) ? default(int?) : (int?)dataReader.GetInt32(21) 
+                }, 
+                parentIdentifierValueComparers: [LIFTABLE Constant: Func<object, object, bool>[] { Func<object, object, bool> } | Resolver: _ => new Func<object, object, bool>[]{ (left, right) => left == null ? right == null : right != null && Invoke((v1, v2) => v1 == v2, (int)left, (int)right) }], 
+                outerIdentifierValueComparers: [LIFTABLE Constant: Func<object, object, bool>[] { Func<object, object, bool> } | Resolver: _ => new Func<object, object, bool>[]{ (left, right) => left == null ? right == null : right != null && Invoke((v1, v2) => v1 == v2, (int)left, (int)right) }], 
+                selfIdentifierValueComparers: [LIFTABLE Constant: Func<object, object, bool>[] { Func<object, object, bool>, Func<object, object, bool>, Func<object, object, bool> } | Resolver: _ => new Func<object, object, bool>[]
+                { 
+                    (left, right) => left == null ? right == null : right != null && Invoke((v1, v2) => v1 == v2, (int)left, (int)right), 
+                    (left, right) => left == null ? right == null : right != null && Invoke((v1, v2) => v1 == v2, (int)left, (int)right), 
+                    (left, right) => left == null ? right == null : right != null && Invoke((v1, v2) => v1 == v2, (int)left, (int)right) 
+                }], 
+                innerShaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+                {
+                    EventPurchase entity;
+                    Event entity;
+                    entity = 
+                    {
+                        MaterializationContext materializationContext2;
+                        IEntityType entityType2;
+                        EventPurchase instance2;
+                        InternalEntityEntry entry2;
+                        bool hasNullKey2;
+                        materializationContext2 = new MaterializationContext(
+                            [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                            queryContext.Context
+                        );
+                        instance2 = default(EventPurchase);
+                        entry2 = queryContext.TryGetEntry(
+                            key: [LIFTABLE Constant: Key: EventPurchase.EventId, EventPurchase.PurchaseId PK | Resolver: c => c.Dependencies.Model.FindEntityType("Assignment1_2139.Models.EventPurchase").FindPrimaryKey()], 
+                            keyValues: new object[]
+                            { 
+                                dataReader.IsDBNull(11) ? default(object) : (object)dataReader.GetInt32(11), 
+                                dataReader.IsDBNull(12) ? default(object) : (object)dataReader.GetInt32(12) 
+                            }, 
+                            throwOnNullKey: False, 
+                            hasNullKey: hasNullKey2);
+                        !(hasNullKey2) ? entry2 != default(InternalEntityEntry) ? 
+                        {
+                            entityType2 = entry2.EntityType;
+                            return instance2 = (EventPurchase)entry2.Entity;
+                        } : 
+                        {
+                            ISnapshot shadowSnapshot2;
+                            shadowSnapshot2 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                            entityType2 = [LIFTABLE Constant: EntityType: EventPurchase | Resolver: namelessParameter{5} => namelessParameter{5}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.EventPurchase")];
+                            instance2 = switch (entityType2)
+                            {
+                                case [LIFTABLE Constant: EntityType: EventPurchase | Resolver: namelessParameter{6} => namelessParameter{6}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.EventPurchase")]: 
+                                    {
+                                        return 
+                                        {
+                                            EventPurchase instance;
+                                            instance = new EventPurchase();
+                                            instance.<EventId>k__BackingField = dataReader.IsDBNull(11) ? default(int) : dataReader.GetInt32(11);
+                                            instance.<PurchaseId>k__BackingField = dataReader.IsDBNull(12) ? default(int) : dataReader.GetInt32(12);
+                                            instance.<CreatedAt>k__BackingField = dataReader.IsDBNull(13) ? default(DateTime) : dataReader.GetDateTime(13);
+                                            instance.<CreatedBy>k__BackingField = dataReader.IsDBNull(14) ? default(string) : dataReader.GetString(14);
+                                            instance.<ModifiedAt>k__BackingField = dataReader.IsDBNull(15) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(15);
+                                            instance.<ModifiedBy>k__BackingField = dataReader.IsDBNull(16) ? default(string) : dataReader.GetString(16);
+                                            instance.<PurchaseDate>k__BackingField = dataReader.IsDBNull(17) ? default(DateTime) : dataReader.GetDateTime(17);
+                                            instance.<Rating>k__BackingField = dataReader.IsDBNull(18) ? default(int?) : (int?)dataReader.GetInt32(18);
+                                            instance.<TicketQuantity>k__BackingField = dataReader.IsDBNull(19) ? default(int) : dataReader.GetInt32(19);
+                                            instance.<UpdatedAt>k__BackingField = dataReader.IsDBNull(20) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(20);
+                                            (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                                context: materializationContext2.Context, 
+                                                entity: instance, 
+                                                queryTrackingBehavior: TrackAll, 
+                                                structuralType: [LIFTABLE Constant: EntityType: EventPurchase | Resolver: namelessParameter{7} => namelessParameter{7}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.EventPurchase")]) : default(void);
+                                            return instance;
+                                        }}
+                                default: 
+                                    default(EventPurchase)
+                            }
+                            ;
+                            entry2 = entityType2 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                                entityType: entityType2, 
+                                entity: instance2, 
+                                snapshot: shadowSnapshot2);
+                            return instance2;
+                        } : default(void);
+                        return instance2;
+                    };
+                    entity = 
+                    {
+                        MaterializationContext materializationContext3;
+                        IEntityType entityType3;
+                        Event instance3;
+                        InternalEntityEntry entry3;
+                        bool hasNullKey3;
+                        materializationContext3 = new MaterializationContext(
+                            [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                            queryContext.Context
+                        );
+                        instance3 = default(Event);
+                        entry3 = queryContext.TryGetEntry(
+                            key: [LIFTABLE Constant: Key: Event.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event").FindPrimaryKey()], 
+                            keyValues: new object[]{ dataReader.IsDBNull(21) ? default(object) : (object)dataReader.GetInt32(21) }, 
+                            throwOnNullKey: False, 
+                            hasNullKey: hasNullKey3);
+                        !(hasNullKey3) ? entry3 != default(InternalEntityEntry) ? 
+                        {
+                            entityType3 = entry3.EntityType;
+                            return instance3 = (Event)entry3.Entity;
+                        } : 
+                        {
+                            ISnapshot shadowSnapshot3;
+                            shadowSnapshot3 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                            entityType3 = [LIFTABLE Constant: EntityType: Event | Resolver: namelessParameter{8} => namelessParameter{8}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event")];
+                            instance3 = switch (entityType3)
+                            {
+                                case [LIFTABLE Constant: EntityType: Event | Resolver: namelessParameter{9} => namelessParameter{9}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event")]: 
+                                    {
+                                        return 
+                                        {
+                                            Event instance;
+                                            instance = new Event();
+                                            instance.<Id>k__BackingField = dataReader.IsDBNull(21) ? default(int) : dataReader.GetInt32(21);
+                                            instance.<AvailableTickets>k__BackingField = dataReader.IsDBNull(22) ? default(int) : dataReader.GetInt32(22);
+                                            instance.<CategoryId>k__BackingField = dataReader.IsDBNull(23) ? default(int) : dataReader.GetInt32(23);
+                                            instance.<CreatedAt>k__BackingField = dataReader.IsDBNull(24) ? default(DateTime) : dataReader.GetDateTime(24);
+                                            instance.<CreatedByUserId>k__BackingField = dataReader.IsDBNull(25) ? default(string) : dataReader.GetString(25);
+                                            instance.<Description>k__BackingField = dataReader.IsDBNull(26) ? default(string) : dataReader.GetString(26);
+                                            instance.<EndDate>k__BackingField = dataReader.IsDBNull(27) ? default(DateTime) : dataReader.GetDateTime(27);
+                                            instance.<EventStatus>k__BackingField = dataReader.IsDBNull(28) ? default(Status) : Invoke(((EnumToNumberConverter<Status, int>)((IReadOnlyProperty)[LIFTABLE Constant: Property: Event.EventStatus (Status) Required | Resolver: namelessParameter{10} => namelessParameter{10}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event").FindProperty("EventStatus")]).GetTypeMapping().Converter).ConvertFromProviderTyped, dataReader.GetInt32(28));
+                                            instance.<StartDate>k__BackingField = dataReader.IsDBNull(29) ? default(DateTime) : dataReader.GetDateTime(29);
+                                            instance.<TicketPrice>k__BackingField = dataReader.IsDBNull(30) ? default(decimal) : dataReader.GetDecimal(30);
+                                            instance.<Title>k__BackingField = dataReader.IsDBNull(31) ? default(string) : dataReader.GetString(31);
+                                            instance.<UpdatedAt>k__BackingField = dataReader.IsDBNull(32) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(32);
+                                            (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                                context: materializationContext3.Context, 
+                                                entity: instance, 
+                                                queryTrackingBehavior: TrackAll, 
+                                                structuralType: [LIFTABLE Constant: EntityType: Event | Resolver: namelessParameter{11} => namelessParameter{11}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event")]) : default(void);
+                                            return instance;
+                                        }}
+                                default: 
+                                    default(Event)
+                            }
+                            ;
+                            entry3 = entityType3 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                                entityType: entityType3, 
+                                entity: instance3, 
+                                snapshot: shadowSnapshot3);
+                            return instance3;
+                        } : default(void);
+                        return instance3;
+                    };
+                    ShaperProcessingExpressionVisitor.IncludeReference<EventPurchase, EventPurchase, Event>(
+                        queryContext: queryContext, 
+                        entity: entity, 
+                        relatedEntity: entity, 
+                        navigation: [LIFTABLE Constant: Navigation: EventPurchase.Event (Event) ToPrincipal Event Inverse: EventPurchases | Resolver: namelessParameter{12} => namelessParameter{12}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.EventPurchase").FindNavigation("Event")], 
+                        inverseNavigation: [LIFTABLE Constant: Navigation: Event.EventPurchases (ICollection<EventPurchase>) Collection ToDependent EventPurchase Inverse: Event | Resolver: namelessParameter{13} => namelessParameter{13}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event").FindNavigation("EventPurchases")], 
+                        fixup: (namelessParameter{14}, namelessParameter{15}) => 
+                        {
+                            namelessParameter{14}.<Event>k__BackingField = namelessParameter{15};
+                            return [LIFTABLE Constant: ClrICollectionAccessor<Event, ICollection<EventPurchase>, EventPurchase> | Resolver: namelessParameter{16} => namelessParameter{16}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Event").FindNavigation("EventPurchases").GetCollectionAccessor()].Add(
+                                entity: namelessParameter{15}, 
+                                value: namelessParameter{14}, 
+                                forMaterialization: True);
+                        }, 
+                        trackingQuery: True);
+                    return entity;
+                }, 
+                inverseNavigation: [LIFTABLE Constant: Navigation: EventPurchase.Purchase (Purchase) ToPrincipal Purchase Inverse: EventPurchases | Resolver: namelessParameter{17} => namelessParameter{17}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.EventPurchase").FindNavigation("Purchase")], 
+                fixup: (namelessParameter{18}, namelessParameter{19}) => 
+                {
+                    [LIFTABLE Constant: ClrICollectionAccessor<Purchase, ICollection<EventPurchase>, EventPurchase> | Resolver: namelessParameter{20} => namelessParameter{20}.Dependencies.Model.FindEntityType("Assignment1_2139.Models.Purchase").FindNavigation("EventPurchases").GetCollectionAccessor()].Add(
+                        entity: namelessParameter{18}, 
+                        value: namelessParameter{19}, 
+                        forMaterialization: True);
+                    return namelessParameter{19}.<Purchase>k__BackingField = namelessParameter{18};
+                }, 
+                trackingQuery: True);
+            return IsTrue(resultCoordinator.ResultReady)
+             ? (Purchase)(resultContext.Values[0]) : default(Purchase);
+        }, 
+        contextType: Assignment1_2139.Data.ApplicationDbContext, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)'
+2025-11-30 23:22:09.152 -05:00 [DBG] Creating DbConnection.
+2025-11-30 23:22:09.152 -05:00 [DBG] Created DbConnection. (0ms).
+2025-11-30 23:22:09.152 -05:00 [DBG] Opening connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:09.152 -05:00 [DBG] Opened connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:09.152 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-11-30 23:22:09.152 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:22:09.152 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:22:09.152 -05:00 [DBG] Executing DbCommand [Parameters=[@__purchaseId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p0."PurchaseId", p0."CreatedAt", p0."CreatedBy", p0."GuestEmail", p0."GuestName", p0."ModifiedAt", p0."ModifiedBy", p0."PurchaseDate", p0."TotalCost", p0."UpdatedAt", p0."UserId", s."EventId", s."PurchaseId", s."CreatedAt", s."CreatedBy", s."ModifiedAt", s."ModifiedBy", s."PurchaseDate", s."Rating", s."TicketQuantity", s."UpdatedAt", s."Id", s."AvailableTickets", s."CategoryId", s."CreatedAt0", s."CreatedByUserId", s."Description", s."EndDate", s."EventStatus", s."StartDate", s."TicketPrice", s."Title", s."UpdatedAt0"
+FROM (
+    SELECT p."PurchaseId", p."CreatedAt", p."CreatedBy", p."GuestEmail", p."GuestName", p."ModifiedAt", p."ModifiedBy", p."PurchaseDate", p."TotalCost", p."UpdatedAt", p."UserId"
+    FROM "Purchases" AS p
+    WHERE p."PurchaseId" = @__purchaseId_0
+    LIMIT 1
+) AS p0
+LEFT JOIN (
+    SELECT e."EventId", e."PurchaseId", e."CreatedAt", e."CreatedBy", e."ModifiedAt", e."ModifiedBy", e."PurchaseDate", e."Rating", e."TicketQuantity", e."UpdatedAt", e0."Id", e0."AvailableTickets", e0."CategoryId", e0."CreatedAt" AS "CreatedAt0", e0."CreatedByUserId", e0."Description", e0."EndDate", e0."EventStatus", e0."StartDate", e0."TicketPrice", e0."Title", e0."UpdatedAt" AS "UpdatedAt0"
+    FROM "EventPurchases" AS e
+    INNER JOIN "Events" AS e0 ON e."EventId" = e0."Id"
+) AS s ON p0."PurchaseId" = s."PurchaseId"
+ORDER BY p0."PurchaseId", s."EventId", s."PurchaseId"
+2025-11-30 23:22:09.156 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__purchaseId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p0."PurchaseId", p0."CreatedAt", p0."CreatedBy", p0."GuestEmail", p0."GuestName", p0."ModifiedAt", p0."ModifiedBy", p0."PurchaseDate", p0."TotalCost", p0."UpdatedAt", p0."UserId", s."EventId", s."PurchaseId", s."CreatedAt", s."CreatedBy", s."ModifiedAt", s."ModifiedBy", s."PurchaseDate", s."Rating", s."TicketQuantity", s."UpdatedAt", s."Id", s."AvailableTickets", s."CategoryId", s."CreatedAt0", s."CreatedByUserId", s."Description", s."EndDate", s."EventStatus", s."StartDate", s."TicketPrice", s."Title", s."UpdatedAt0"
+FROM (
+    SELECT p."PurchaseId", p."CreatedAt", p."CreatedBy", p."GuestEmail", p."GuestName", p."ModifiedAt", p."ModifiedBy", p."PurchaseDate", p."TotalCost", p."UpdatedAt", p."UserId"
+    FROM "Purchases" AS p
+    WHERE p."PurchaseId" = @__purchaseId_0
+    LIMIT 1
+) AS p0
+LEFT JOIN (
+    SELECT e."EventId", e."PurchaseId", e."CreatedAt", e."CreatedBy", e."ModifiedAt", e."ModifiedBy", e."PurchaseDate", e."Rating", e."TicketQuantity", e."UpdatedAt", e0."Id", e0."AvailableTickets", e0."CategoryId", e0."CreatedAt" AS "CreatedAt0", e0."CreatedByUserId", e0."Description", e0."EndDate", e0."EventStatus", e0."StartDate", e0."TicketPrice", e0."Title", e0."UpdatedAt" AS "UpdatedAt0"
+    FROM "EventPurchases" AS e
+    INNER JOIN "Events" AS e0 ON e."EventId" = e0."Id"
+) AS s ON p0."PurchaseId" = s."PurchaseId"
+ORDER BY p0."PurchaseId", s."EventId", s."PurchaseId"
+2025-11-30 23:22:09.156 -05:00 [DBG] Context 'ApplicationDbContext' started tracking 'Purchase' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-11-30 23:22:09.161 -05:00 [DBG] Closing data reader to 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:09.161 -05:00 [DBG] A data reader for 'Assignment1_2139' on server 'tcp://localhost:5432' is being disposed after spending 5ms reading results.
+2025-11-30 23:22:09.163 -05:00 [DBG] Closing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:09.163 -05:00 [DBG] Closed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (0ms).
+2025-11-30 23:22:09.164 -05:00 [INF] Executed action method Assignment1_2139.Controllers.PurchasesController.Details (Assignment1-2139), returned result Microsoft.AspNetCore.Mvc.ViewResult in 47.2657ms.
+2025-11-30 23:22:09.164 -05:00 [DBG] View lookup cache miss for view 'Details' in controller 'Purchases'.
+2025-11-30 23:22:09.166 -05:00 [INF] Executing ViewResult, running view Details.
+2025-11-30 23:22:09.167 -05:00 [DBG] The view path '/Views/Purchases/Details.cshtml' was found in 2.3348ms.
+2025-11-30 23:22:09.178 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Purchases])
+2025-11-30 23:22:09.179 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Purchases and 
+2025-11-30 23:22:09.179 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Purchases
+2025-11-30 23:22:09.182 -05:00 [DBG] View lookup cache hit for view '_Layout' in controller 'Purchases'.
+2025-11-30 23:22:09.183 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (area=[],action=[Index],controller=[Home])
+2025-11-30 23:22:09.183 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in  and 
+2025-11-30 23:22:09.183 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /
+2025-11-30 23:22:09.183 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Events])
+2025-11-30 23:22:09.183 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Events and 
+2025-11-30 23:22:09.183 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Events
+2025-11-30 23:22:09.184 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Categories])
+2025-11-30 23:22:09.184 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Categories and 
+2025-11-30 23:22:09.184 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Categories
+2025-11-30 23:22:09.184 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Purchases])
+2025-11-30 23:22:09.184 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Purchases and 
+2025-11-30 23:22:09.184 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Purchases
+2025-11-30 23:22:09.184 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[GeneralSearch],controller=[Home])
+2025-11-30 23:22:09.184 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Home/GeneralSearch and 
+2025-11-30 23:22:09.185 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Home/GeneralSearch
+2025-11-30 23:22:09.187 -05:00 [INF] Executed ViewResult - view Details executed in 22.5592ms.
+2025-11-30 23:22:09.187 -05:00 [INF] Executed action Assignment1_2139.Controllers.PurchasesController.Details (Assignment1-2139) in 98.3284ms
+2025-11-30 23:22:09.187 -05:00 [INF] Executed endpoint 'Assignment1_2139.Controllers.PurchasesController.Details (Assignment1-2139)'
+2025-11-30 23:22:09.187 -05:00 [DBG] Connection id "0HNHGI4N8NE70" completed keep alive response.
+2025-11-30 23:22:09.187 -05:00 [DBG] 'ApplicationDbContext' disposed.
+2025-11-30 23:22:09.187 -05:00 [DBG] Disposing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:09.187 -05:00 [DBG] Disposed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (0ms).
+2025-11-30 23:22:09.187 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5175/Purchases/Details?purchaseId=14 - 200 null text/html; charset=utf-8 119.0586ms
+2025-11-30 23:22:09.224 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5175/Assignment1.styles.css - null null
+2025-11-30 23:22:09.224 -05:00 [DBG] The request path /Assignment1.styles.css does not match an existing file
+2025-11-30 23:22:09.224 -05:00 [DBG] No candidates found for the request path '/Assignment1.styles.css'
+2025-11-30 23:22:09.224 -05:00 [DBG] Request did not match any endpoints
+2025-11-30 23:22:09.224 -05:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2025-11-30 23:22:09.224 -05:00 [DBG] Connection id "0HNHGI4N8NE70" completed keep alive response.
+2025-11-30 23:22:09.224 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5175/Assignment1.styles.css - 404 0 null 0.7139ms
+2025-11-30 23:22:09.225 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5175/Assignment1.styles.css, Response status code: 404
+2025-11-30 23:22:14.868 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5175/Purchases - null null
+2025-11-30 23:22:14.869 -05:00 [DBG] The request path /Purchases does not match a supported file type
+2025-11-30 23:22:14.869 -05:00 [DBG] 1 candidate(s) found for the request path '/Purchases'
+2025-11-30 23:22:14.869 -05:00 [DBG] Endpoint 'Assignment1_2139.Controllers.PurchasesController.Index (Assignment1-2139)' with route pattern '{controller=Home}/{action=Index}/{id?}' is valid for the request path '/Purchases'
+2025-11-30 23:22:14.869 -05:00 [DBG] Request matched endpoint 'Assignment1_2139.Controllers.PurchasesController.Index (Assignment1-2139)'
+2025-11-30 23:22:14.869 -05:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2025-11-30 23:22:14.871 -05:00 [INF] Executing endpoint 'Assignment1_2139.Controllers.PurchasesController.Index (Assignment1-2139)'
+2025-11-30 23:22:14.871 -05:00 [INF] Route matched with {action = "Index", controller = "Purchases"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Assignment1_2139.Controllers.PurchasesController (Assignment1-2139).
+2025-11-30 23:22:14.871 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-11-30 23:22:14.871 -05:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2025-11-30 23:22:14.871 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2025-11-30 23:22:14.871 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-11-30 23:22:14.871 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2025-11-30 23:22:14.871 -05:00 [DBG] Executing controller factory for controller Assignment1_2139.Controllers.PurchasesController (Assignment1-2139)
+2025-11-30 23:22:14.871 -05:00 [DBG] Executed controller factory for controller Assignment1_2139.Controllers.PurchasesController (Assignment1-2139)
+2025-11-30 23:22:14.871 -05:00 [INF] Executing action method Assignment1_2139.Controllers.PurchasesController.Index (Assignment1-2139) - Validation state: "Valid"
+2025-11-30 23:22:14.872 -05:00 [DBG] Entity Framework Core 9.0.0 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.1+2e9a27fa9e7c2988a39d98c9b89cafdcf5ccf42b' with options: None
+2025-11-30 23:22:14.872 -05:00 [DBG] Creating DbConnection.
+2025-11-30 23:22:14.872 -05:00 [DBG] Created DbConnection. (0ms).
+2025-11-30 23:22:14.872 -05:00 [DBG] Opening connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:14.872 -05:00 [DBG] Opened connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:14.872 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-11-30 23:22:14.872 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:22:14.872 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2025-11-30 23:22:14.872 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."PurchaseId", p."CreatedAt", p."CreatedBy", p."GuestEmail", p."GuestName", p."ModifiedAt", p."ModifiedBy", p."PurchaseDate", p."TotalCost", p."UpdatedAt", p."UserId", s."EventId", s."PurchaseId", s."CreatedAt", s."CreatedBy", s."ModifiedAt", s."ModifiedBy", s."PurchaseDate", s."Rating", s."TicketQuantity", s."UpdatedAt", s."Id", s."AvailableTickets", s."CategoryId", s."CreatedAt0", s."CreatedByUserId", s."Description", s."EndDate", s."EventStatus", s."StartDate", s."TicketPrice", s."Title", s."UpdatedAt0"
+FROM "Purchases" AS p
+LEFT JOIN (
+    SELECT e."EventId", e."PurchaseId", e."CreatedAt", e."CreatedBy", e."ModifiedAt", e."ModifiedBy", e."PurchaseDate", e."Rating", e."TicketQuantity", e."UpdatedAt", e0."Id", e0."AvailableTickets", e0."CategoryId", e0."CreatedAt" AS "CreatedAt0", e0."CreatedByUserId", e0."Description", e0."EndDate", e0."EventStatus", e0."StartDate", e0."TicketPrice", e0."Title", e0."UpdatedAt" AS "UpdatedAt0"
+    FROM "EventPurchases" AS e
+    INNER JOIN "Events" AS e0 ON e."EventId" = e0."Id"
+) AS s ON p."PurchaseId" = s."PurchaseId"
+ORDER BY p."PurchaseId", s."EventId", s."PurchaseId"
+2025-11-30 23:22:14.874 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."PurchaseId", p."CreatedAt", p."CreatedBy", p."GuestEmail", p."GuestName", p."ModifiedAt", p."ModifiedBy", p."PurchaseDate", p."TotalCost", p."UpdatedAt", p."UserId", s."EventId", s."PurchaseId", s."CreatedAt", s."CreatedBy", s."ModifiedAt", s."ModifiedBy", s."PurchaseDate", s."Rating", s."TicketQuantity", s."UpdatedAt", s."Id", s."AvailableTickets", s."CategoryId", s."CreatedAt0", s."CreatedByUserId", s."Description", s."EndDate", s."EventStatus", s."StartDate", s."TicketPrice", s."Title", s."UpdatedAt0"
+FROM "Purchases" AS p
+LEFT JOIN (
+    SELECT e."EventId", e."PurchaseId", e."CreatedAt", e."CreatedBy", e."ModifiedAt", e."ModifiedBy", e."PurchaseDate", e."Rating", e."TicketQuantity", e."UpdatedAt", e0."Id", e0."AvailableTickets", e0."CategoryId", e0."CreatedAt" AS "CreatedAt0", e0."CreatedByUserId", e0."Description", e0."EndDate", e0."EventStatus", e0."StartDate", e0."TicketPrice", e0."Title", e0."UpdatedAt" AS "UpdatedAt0"
+    FROM "EventPurchases" AS e
+    INNER JOIN "Events" AS e0 ON e."EventId" = e0."Id"
+) AS s ON p."PurchaseId" = s."PurchaseId"
+ORDER BY p."PurchaseId", s."EventId", s."PurchaseId"
+2025-11-30 23:22:14.874 -05:00 [DBG] Context 'ApplicationDbContext' started tracking 'Purchase' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-11-30 23:22:14.874 -05:00 [DBG] Closing data reader to 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:14.875 -05:00 [DBG] A data reader for 'Assignment1_2139' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results.
+2025-11-30 23:22:14.875 -05:00 [DBG] Closing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:14.875 -05:00 [DBG] Closed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (0ms).
+2025-11-30 23:22:14.875 -05:00 [INF] Executed action method Assignment1_2139.Controllers.PurchasesController.Index (Assignment1-2139), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3.5304ms.
+2025-11-30 23:22:14.875 -05:00 [DBG] View lookup cache hit for view 'Index' in controller 'Purchases'.
+2025-11-30 23:22:14.875 -05:00 [INF] Executing ViewResult, running view Index.
+2025-11-30 23:22:14.875 -05:00 [DBG] The view path '/Views/Purchases/Index.cshtml' was found in 0.0615ms.
+2025-11-30 23:22:14.876 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (purchaseId=[14],action=[Details],controller=[Purchases])
+2025-11-30 23:22:14.876 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Purchases/Details and ?purchaseId=14
+2025-11-30 23:22:14.876 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Purchases/Details?purchaseId=14
+2025-11-30 23:22:14.876 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (purchaseId=[14],action=[Edit],controller=[Purchases])
+2025-11-30 23:22:14.876 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Purchases/Edit and ?purchaseId=14
+2025-11-30 23:22:14.876 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Purchases/Edit?purchaseId=14
+2025-11-30 23:22:14.876 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (purchaseId=[14],action=[Delete],controller=[Purchases])
+2025-11-30 23:22:14.876 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Purchases/Delete and ?purchaseId=14
+2025-11-30 23:22:14.876 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Purchases/Delete?purchaseId=14
+2025-11-30 23:22:14.876 -05:00 [DBG] View lookup cache hit for view '_Layout' in controller 'Purchases'.
+2025-11-30 23:22:14.876 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (area=[],action=[Index],controller=[Home])
+2025-11-30 23:22:14.876 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in  and 
+2025-11-30 23:22:14.876 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /
+2025-11-30 23:22:14.877 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Events])
+2025-11-30 23:22:14.877 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Events and 
+2025-11-30 23:22:14.877 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Events
+2025-11-30 23:22:14.877 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Categories])
+2025-11-30 23:22:14.877 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Categories and 
+2025-11-30 23:22:14.877 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Categories
+2025-11-30 23:22:14.877 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[Index],controller=[Purchases])
+2025-11-30 23:22:14.877 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Purchases and 
+2025-11-30 23:22:14.877 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Purchases
+2025-11-30 23:22:14.877 -05:00 [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address (action=[GeneralSearch],controller=[Home])
+2025-11-30 23:22:14.877 -05:00 [DBG] Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Home/GeneralSearch and 
+2025-11-30 23:22:14.877 -05:00 [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result /Home/GeneralSearch
+2025-11-30 23:22:14.878 -05:00 [INF] Executed ViewResult - view Index executed in 2.8773ms.
+2025-11-30 23:22:14.878 -05:00 [INF] Executed action Assignment1_2139.Controllers.PurchasesController.Index (Assignment1-2139) in 6.9345ms
+2025-11-30 23:22:14.878 -05:00 [INF] Executed endpoint 'Assignment1_2139.Controllers.PurchasesController.Index (Assignment1-2139)'
+2025-11-30 23:22:14.878 -05:00 [DBG] Connection id "0HNHGI4N8NE70" completed keep alive response.
+2025-11-30 23:22:14.878 -05:00 [DBG] 'ApplicationDbContext' disposed.
+2025-11-30 23:22:14.878 -05:00 [DBG] Disposing connection to database 'Assignment1_2139' on server 'tcp://localhost:5432'.
+2025-11-30 23:22:14.878 -05:00 [DBG] Disposed connection to database 'Assignment1_2139' on server 'tcp://localhost:5432' (0ms).
+2025-11-30 23:22:14.878 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5175/Purchases - 200 null text/html; charset=utf-8 9.8737ms
+2025-11-30 23:22:14.922 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5175/Assignment1.styles.css - null null
+2025-11-30 23:22:14.922 -05:00 [DBG] The request path /Assignment1.styles.css does not match an existing file
+2025-11-30 23:22:14.922 -05:00 [DBG] No candidates found for the request path '/Assignment1.styles.css'
+2025-11-30 23:22:14.922 -05:00 [DBG] Request did not match any endpoints
+2025-11-30 23:22:14.923 -05:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2025-11-30 23:22:14.923 -05:00 [DBG] Connection id "0HNHGI4N8NE70" completed keep alive response.
+2025-11-30 23:22:14.923 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5175/Assignment1.styles.css - 404 0 null 0.5404ms
+2025-11-30 23:22:14.923 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5175/Assignment1.styles.css, Response status code: 404
+2025-11-30 23:22:18.786 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5175/Purchases/Edit?purchaseId=14 - null null
+2025-11-30 23:22:18.786 -05:00 [DBG] The request path /Purchases/Edit does not match a supported file type
+2025-11-30 23:22:18.787 -05:00 [DBG] 1 candidate(s) found for the request path '/Purchases/Edit'
+2025-11-30 23:22:18.787 -05:00 [DBG] Endpoint 'Assignment1_2139.Controllers.PurchasesController.Edit (Assignment1-2139)' with route pattern '{controller=Home}/{action=Index}/{id?}' is valid for the request path '/Purchases/Edit'
+2025-11-30 23:22:18.787 -05:00 [DBG] Request matched endpoint 'Assignment1_2139.Controllers.PurchasesController.Edit (Assignment1-2139)'
+2025-11-30 23:22:18.788 -05:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2025-11-30 23:22:18.788 -05:00 [DBG] Policy authentication schemes  did not succeed
+2025-11-30 23:22:18.794 -05:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Organizer)
+2025-11-30 23:22:18.801 -05:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2025-11-30 23:22:18.801 -05:00 [DBG] Connection id "0HNHGI4N8NE70" completed keep alive response.
+2025-11-30 23:22:18.801 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5175/Purchases/Edit?purchaseId=14 - 302 0 null 15.6722ms
+2025-11-30 23:22:18.806 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5175/Account/Login?ReturnUrl=%2FPurchases%2FEdit%3FpurchaseId%3D14 - null null
+2025-11-30 23:22:18.806 -05:00 [DBG] The request path /Account/Login does not match a supported file type
+2025-11-30 23:22:18.806 -05:00 [DBG] 1 candidate(s) found for the request path '/Account/Login'
+2025-11-30 23:22:18.806 -05:00 [DBG] Endpoint 'Assignment1_2139.Controllers.AccountController.Login (Assignment1-2139)' with route pattern '{controller=Home}/{action=Index}/{id?}' is valid for the request path '/Account/Login'
+2025-11-30 23:22:18.806 -05:00 [DBG] Request matched endpoint 'Assignment1_2139.Controllers.AccountController.Login (Assignment1-2139)'
+2025-11-30 23:22:18.806 -05:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2025-11-30 23:22:18.806 -05:00 [INF] Executing endpoint 'Assignment1_2139.Controllers.AccountController.Login (Assignment1-2139)'
+2025-11-30 23:22:18.808 -05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller Assignment1_2139.Controllers.AccountController (Assignment1-2139).
+2025-11-30 23:22:18.808 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-11-30 23:22:18.808 -05:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2025-11-30 23:22:18.808 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2025-11-30 23:22:18.808 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-11-30 23:22:18.808 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2025-11-30 23:22:18.808 -05:00 [DBG] Executing controller factory for controller Assignment1_2139.Controllers.AccountController (Assignment1-2139)
+2025-11-30 23:22:18.817 -05:00 [INF] Executed action Assignment1_2139.Controllers.AccountController.Login (Assignment1-2139) in 9.1047ms
+2025-11-30 23:22:18.818 -05:00 [INF] Executed endpoint 'Assignment1_2139.Controllers.AccountController.Login (Assignment1-2139)'
+2025-11-30 23:22:18.818 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UI.Services.IEmailSender' while attempting to activate 'Assignment1_2139.Controllers.AccountController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method417(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-30 23:22:18.855 -05:00 [DBG] Connection id "0HNHGI4N8NE70" completed keep alive response.
+2025-11-30 23:22:18.855 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5175/Account/Login?ReturnUrl=%2FPurchases%2FEdit%3FpurchaseId%3D14 - 500 null text/html; charset=utf-8 49.7271ms
+2025-11-30 23:24:15.468 -05:00 [DBG] Connection id "0HNHGI4N8NE71" disconnecting.
+2025-11-30 23:24:15.469 -05:00 [DBG] Connection id "0HNHGI4N8NE71" stopped.
+2025-11-30 23:24:15.470 -05:00 [DBG] Connection id "0HNHGI4N8NE71" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-30 23:24:29.607 -05:00 [DBG] Connection id "0HNHGI4N8NE70" disconnecting.
+2025-11-30 23:24:29.607 -05:00 [DBG] Connection id "0HNHGI4N8NE70" stopped.
+2025-11-30 23:24:29.607 -05:00 [DBG] Connection id "0HNHGI4N8NE70" sending FIN because: "The Socket transport's send loop completed gracefully."

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Assignment1_2139.Models.EventPurchase>
+
+<h3>My Tickets</h3>
+
+<table class="table table-striped table-hover">
+    <thead>
+    <tr>
+        <th>Event</th>
+        <th>Date</th>
+        <th>Tickets</th>
+        <th>Price per Ticket</th>
+        <th>Total Cost</th>
+        <th>QR Code</th>
+        <th>Download</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var ep in Model)
+    {
+        var evt = ep.Event;
+        <tr>
+            <td>@(evt?.Title ?? "Event deleted")</td>
+            <td>@(evt?.StartDate.ToString("f") ?? "-")</td>
+            <td>@ep.TicketQuantity</td>
+            <td>@(evt != null ? evt.TicketPrice.ToString("C") : "-")</td>
+            <td>@(evt != null ? (ep.TicketQuantity * evt.TicketPrice).ToString("C") : "-")</td>
+            <td>
+                @if (evt != null)
+                {
+                    <img src="@Url.Action("GenerateQRCode", "Dashboard", new { eventId = ep.EventId })" alt="QR Code" width="100" />
+                }
+            </td>
+            <td>
+                @if (evt != null)
+                {
+                    <a class="btn btn-primary btn-sm" href="@Url.Action("DownloadTicket", "Dashboard", new { eventId = ep.EventId })">
+                        Download PDF
+                    </a>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

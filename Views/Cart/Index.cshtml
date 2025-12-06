@@ -1,0 +1,159 @@
+﻿@model IEnumerable<Assignment1_2139.Models.CartItem>
+
+<h2>Your Cart</h2>
+
+<table class="table" id="cartTable">
+    <thead>
+        <tr>
+            <th>Event</th>
+            <th>Tickets</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr data-event-id="@item.Event.Id">
+                <td>@item.Event.Title</td>
+
+                <td>
+                    <input type="number" class="cart-qty form-control"
+                           value="@item.Quantity"
+                           min="1"
+                           max="@item.Event.AvailableTickets"
+                           style="width:80px;" />
+                </td>
+
+                <td>@item.Event.TicketPrice.ToString("C")</td>
+
+                <td class="item-total">
+                    @(item.Event.TicketPrice * item.Quantity).ToString("C")
+                </td>
+
+                <!-- FIX: Remove button added -->
+                <td>
+                    <button class="btn btn-danger btn-sm remove-from-cart"
+                            data-event-id="@item.Event.Id">
+                        Remove
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-end">
+    <strong>Total: $<span id="cartTotal">@Model.Sum(c => c.Event.TicketPrice * c.Quantity).ToString("F2")</span></strong>
+</div>
+
+<!-- Purchase Modal -->
+<div class="modal fade" id="purchaseModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Purchase Successful!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p>Thank you for your purchase!</p>
+                <canvas id="confettiCanvas"></canvas>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        // =============================
+        // Add to Cart AJAX
+        // =============================
+        // Add to Cart with Live Update
+        $(document).on('click', '.add-to-cart', function () {
+            var eventId = $(this).data('event-id');
+            var qty = parseInt($('#qty_' + eventId).val());
+
+            $.ajax({
+                url: '@Url.Action("AddToCart","Events")',
+                type: 'POST',
+                data: { eventId: eventId, quantity: qty },
+                success: function (data) {
+                    if (data.success) {
+                        // Update cart badge & total price
+                        $('#cartBadge').text(data.totalQuantity);
+                        $('#cartTotal').text(data.cartTotal.toFixed(2));
+
+                        // Low stock warning
+                        var available = parseInt($('#qty_' + eventId).attr('max'));
+                        if (available - qty <= 7) {
+                            $('#stock-warning-' + eventId).show();
+                        }
+
+                        // Optional: quick confirmation alert
+                        alert("Added to cart!");
+                    } else {
+                        alert(data.message);
+                    }
+                },
+                error: function () {
+                    alert("Error adding to cart.");
+                }
+
+            });
+        });
+
+
+        // Update Quantity in Cart page
+        $(document).on('change', '.cart-qty', function () {
+            var row = $(this).closest('tr');
+            var eventId = row.data('event-id');
+            var newQty = parseInt($(this).val());
+
+            $.ajax({
+                url: '@Url.Action("UpdateCartQuantity","Events")',
+                type: 'POST',
+                data: { eventId: eventId, quantity: newQty },
+                success: function (data) {
+                    if (data.success) {
+                        row.find('.item-total').text('$' + data.itemTotal.toFixed(2));
+                        $('#cartTotal').text(data.cartTotal.toFixed(2));
+                        $('#cartBadge').text(data.totalQuantity);
+
+                        // Low stock warning
+                        var available = parseInt($('#qty_' + eventId).attr('max'));
+                        if (available - newQty <= 7) {
+                            $('#stock-warning-' + eventId).show();
+                        } else {
+                            $('#stock-warning-' + eventId).hide();
+                        }
+                    }
+                }
+            });
+        });
+        // SHOW SUCCESS MODAL
+        function showPurchaseConfirmation() {
+            var myModal = new bootstrap.Modal(document.getElementById('purchaseModal'));
+            myModal.show();
+            confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+        }
+
+        @if (TempData["PurchaseSuccess"] != null)
+        {
+            <text>
+                $(document).ready(function () {
+                    showPurchaseConfirmation();
+                });
+            </text>
+        }
+    </script>
+}
+
+
+            
+    

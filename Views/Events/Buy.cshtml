@@ -1,0 +1,74 @@
+﻿@model Assignment1_2139.Models.Event
+@Html.AntiForgeryToken()
+
+<h2>Buy Tickets for @Model.Title</h2>
+<p>Category: @Model.Category.Name</p>
+<p>Description: @Model.Description</p>
+<p>Price: @Model.TicketPrice.ToString("C")</p>
+<p>Available Tickets: <span id="availableTickets">@Model.AvailableTickets</span></p>
+
+<div>
+    Quantity: <input type="number" id="buyQty" value="1" min="1" max="@Model.AvailableTickets" style="width:60px;" />
+</div>
+
+<button id="buyTicketsBtn" class="btn btn-primary mt-2">Buy Tickets</button>
+
+<div class="modal fade" id="purchaseModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Purchase Successful!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Thank you for your purchase!</p>
+        <canvas id="confettiCanvas"></canvas>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+$('#buyTicketsBtn').click(function() {
+    var quantity = parseInt($('#buyQty').val());
+    var eventId = @Model.Id;
+
+    $.ajax({
+        url: '/Events/Buy',
+        type: 'POST',
+        data: {
+            eventId: eventId,
+            quantity: quantity,
+            __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+        },
+        success: function(data) {
+            if (data.success) {
+                // Show modal
+                var myModal = new bootstrap.Modal(document.getElementById('purchaseModal'));
+                myModal.show();
+
+                confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+
+                // Update available tickets dynamically
+                var newAvailable = parseInt($('#availableTickets').text()) - quantity;
+                $('#availableTickets').text(newAvailable);
+                $('#buyQty').attr('max', newAvailable);
+            } else {
+                alert(data.message);
+            }
+        },
+        error: function(xhr) {
+            alert('Something went wrong.');
+            console.log(xhr.responseText);
+        }
+    });
+});
+</script>
+}
+
+

@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "My Analytics";
+}
+
+<h2>My Analytics</h2>
+<p>Only accessible to Admins and Organizers.</p>
+
+<hr />
+
+<h4>Tickets Sold by Category</h4>
+<canvas id="ticketsByCategoryChart" width="400" height="200"></canvas>
+
+<hr />
+
+<h4>Revenue Per Month</h4>
+<canvas id="revenuePerMonthChart" width="400" height="200"></canvas>
+
+<hr />
+
+<h4>Top 5 Best-Selling Events</h4>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Tickets Sold</th>
+            <th>Ticket Price</th>
+            <th>Total Revenue</th>
+        </tr>
+    </thead>
+    <tbody id="topEventsTableBody">
+        <!-- Rows will be populated by JS -->
+    </tbody>
+</table>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Tickets by Category Chart
+        fetch('@Url.Action("SalesByCategory", "Analytics")')
+            .then(response => response.json())
+            .then(data => {
+                const labels = data.map(d => d.category);
+                const tickets = data.map(d => d.tickets);
+
+                const ctx1 = document.getElementById('ticketsByCategoryChart').getContext('2d');
+                new Chart(ctx1, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Tickets Sold',
+                            data: tickets,
+                            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            });
+
+        // Revenue per Month Chart
+        fetch('@Url.Action("RevenuePerMonth", "Analytics")')
+            .then(response => response.json())
+            .then(data => {
+                const labels = data.map(d => `${d.year}-${d.month.toString().padStart(2, '0')}`);
+                const revenue = data.map(d => d.revenue);
+
+                const ctx2 = document.getElementById('revenuePerMonthChart').getContext('2d');
+                new Chart(ctx2, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Revenue',
+                            data: revenue,
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.3
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            });
+
+        // Top 5 Best-Selling Events Table
+        fetch('@Url.Action("TopSelling", "Analytics")')
+            .then(response => response.json())
+            .then(data => {
+                const tbody = document.getElementById('topEventsTableBody');
+                tbody.innerHTML = '';
+                data.forEach(e => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${e.title}</td>
+                        <td>${e.sold}</td>
+                        <td>$${e.ticketPrice.toFixed(2)}</td>
+                        <td>$${(e.sold * e.ticketPrice).toFixed(2)}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            });
+    </script>
+}

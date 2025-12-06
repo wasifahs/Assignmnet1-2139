@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Assignment1_2139.Models.Event>
+@using System.Security.Claims
+
+@foreach (var e in Model)
+{
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">@e.Title</h5>
+            <p class="card-text">
+                @(string.IsNullOrEmpty(e.Description) ? "" : (e.Description.Length > 120 ? e.Description.Substring(0, 120) + "..." : e.Description))
+            </p>
+            <p>
+                <strong>Price:</strong> @e.TicketPrice.ToString("C") • 
+                <strong>Available:</strong> @e.AvailableTickets
+            </p>
+
+            <div class="mb-2">
+                <label for="qty_@e.Id">Quantity:</label>
+                <input type="number" id="qty_@e.Id" value="1" min="1" max="@e.AvailableTickets" class="form-control" style="width:100px;" />
+            </div>
+
+            <a asp-action="Details" asp-route-id="@e.Id" class="btn btn-sm btn-primary">Details</a>
+
+            @if (User.IsInRole("Organizer") && e.CreatedByUserId == User.FindFirst(ClaimTypes.NameIdentifier)?.Value)
+            {
+                <a asp-action="Edit" asp-route-id="@e.Id" class="btn btn-warning btn-sm me-1">Edit</a>
+            }
+
+            @if (User.IsInRole("Admin"))
+            {
+                <a asp-action="Edit" asp-route-id="@e.Id" class="btn btn-warning btn-sm me-1">Edit</a>
+                <a asp-action="Delete" asp-route-id="@e.Id" class="btn btn-danger btn-sm me-1">Delete</a>
+            }
+
+            <button class="btn btn-sm btn-success add-to-cart" data-event-id="@e.Id">Add to Cart</button>
+            <span id="stock-warning-@e.Id" class="text-danger" style="display:none;">Low stock!</span>
+        </div>
+    </div>
+}
+
+

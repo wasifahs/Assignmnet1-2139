@@ -1,0 +1,145 @@
+﻿@model Assignment1_2139.Models.ViewModels.DashboardViewModel
+
+@{
+    ViewData["Title"] = "Organizer Dashboard";
+}
+
+<h2 class="mb-4">Welcome to Organizer Dashboard</h2>
+
+<!-- TOTAL REVENUE CARD -->
+<div class="card mb-4">
+    <div class="card-body">
+        <h4>Total Revenue</h4>
+        <h2 class="text-success">@Model.TotalRevenue.ToString("C")</h2>
+    </div>
+</div>
+
+<!-- MY EVENTS -->
+<div class="card mb-4">
+    <div class="card-body">
+        <h4>My Events</h4>
+        @if (!Model.MyEvents.Any())
+        {
+            <p class="text-muted">You have not created any events yet.</p>
+        }
+        else
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Event Title</th>
+                        <th>Start Date</th>
+                        <th>Ticket Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var ev in Model.MyEvents)
+                {
+                    <tr>
+                        <td>@ev.Title</td>
+                        <td>@ev.StartDate.ToShortDateString()</td>
+                        <td>@ev.TicketPrice.ToString("C")</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+
+<!-- ANALYTICS: TICKET SALES BY CATEGORY -->
+<div class="card mb-4">
+    <div class="card-body">
+        <h4>Ticket Sales by Category</h4>
+
+        @if (Model.TicketSalesByCategory is IEnumerable<dynamic> categories && categories.Any())
+        {
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Tickets Sold</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var c in categories)
+                {
+                    <tr>
+                        <td>@c.Category</td>
+                        <td>@c.TicketsSold</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p class="text-muted">No ticket sales yet.</p>
+        }
+    </div>
+</div>
+
+<!-- ANALYTICS: REVENUE PER MONTH -->
+<div class="card mb-4">
+    <div class="card-body">
+        <h4>Revenue Per Month</h4>
+
+        @if (Model.RevenuePerMonth is IEnumerable<dynamic> revenue && revenue.Any())
+        {
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in revenue)
+                {
+                    <tr>
+                        <td>@item.Year-@item.Month.ToString("D2")</td>
+                        <td>@item.Revenue.ToString("C")</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p class="text-muted">No revenue data yet.</p>
+        }
+    </div>
+</div>
+
+<!-- TOP 5 EVENTS -->
+<div class="card mb-4">
+    <div class="card-body">
+        <h4>Top 5 Best-Selling Events</h4>
+
+        @if (Model.Top5Events is IEnumerable<dynamic> eventsList && eventsList.Any())
+        {
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Tickets Sold</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var e in eventsList)
+                {
+                    <tr>
+                        <td>@e.Title</td>
+                        <td>@e.Sold</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p class="text-muted">No event sales yet.</p>
+        }
+    </div>
+</div>
+
